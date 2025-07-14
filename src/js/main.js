@@ -1,6 +1,11 @@
 import "virtual:svg-icons-register";
 import Alpine from "alpinejs";
 
-window.Alpine = Alpine;
-Alpine.start();
+document.addEventListener("alpine:init", () => {
+  Alpine.store("menu", {
+    isMobileMenuOpen: false,
+    openSubmenuId: null,
+  });
+});
 
+Alpine.start();

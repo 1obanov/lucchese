@@ -1,3 +1,281 @@
 {
-  "template": "layouts/main.liquid"
+  "template": "layouts/main.liquid",
+  "header": {
+    "navigation": {
+      "women": [
+        {
+          "id": "boots",
+          "name": "Boots",
+          "url": "/boots",
+          "submenu": [
+            { "name": "Shop All", "url": "/boots" },
+            { "name": "Best Sellers", "url": "/boots/best-sellers" },
+            { "name": "Cowboy", "url": "/boots/cowboy" },
+            { "name": "Tall", "url": "/boots/tall" },
+            { "name": "Booties", "url": "/boots/booties" },
+            { "name": "Barn Boots", "url": "/boots/barn-boots" }
+          ]
+        },
+        {
+          "id": "shoes",
+          "name": "Shoes",
+          "url": "/shoes",
+          "submenu": [
+            { "name": "Shop All", "url": "/shoes" },
+            { "name": "Loafers", "url": "/shoes/loafers" },
+            { "name": "Sneakers", "url": "/shoes/sneakers" },
+            { "name": "Mules", "url": "/shoes/mules" },
+            { "name": "Sandals", "url": "/shoes/sandals" }
+          ]
+        },
+        {
+          "id": "ready-to-wear",
+          "name": "Ready to Wear",
+          "url": "/ready-to-wear",
+          "submenu": [
+            { "name": "Shop All", "url": "/ready-to-wear" },
+            { "name": "Denim", "url": "/ready-to-wear/denim" },
+            { "name": "Tops", "url": "/ready-to-wear/tops" },
+            { "name": "Bottoms", "url": "/ready-to-wear/bottoms" },
+            { "name": "Dresses", "url": "/ready-to-wear/dresses" },
+            { "name": "Outerwear", "url": "/ready-to-wear/outerwear" }
+          ]
+        },
+        {
+          "id": "accessories",
+          "name": "Accessories",
+          "url": "/accessories",
+          "submenu": [
+            { "name": "Shop All", "url": "/accessories" },
+            { "name": "Travel", "url": "/accessories/travel" },
+            { "name": "Handbags", "url": "/accessories/handbags" },
+            {
+              "name": "Small Leather Goods",
+              "url": "/accessories/small-leather-goods"
+            },
+            { "name": "Belts", "url": "/accessories/belts" },
+            { "name": "Cowboy Hats", "url": "/accessories/cowboy-hats" },
+            { "name": "Headwear", "url": "/accessories/headwear" },
+            { "name": "Scarves", "url": "/accessories/scarves" },
+            { "name": "Boot Care", "url": "/accessories/boot-care" }
+          ]
+        },
+        {
+          "id": "lifestyle",
+          "name": "Lifestyle",
+          "url": "/lifestyle",
+          "submenu": [
+            { "name": "Shop All Lifestyle", "url": "/lifestyle" },
+            { "name": "Leather Care", "url": "/lifestyle/leather-care" }
+          ]
+        },
+        {
+          "id": "collaborations",
+          "name": "Collaborations",
+          "url": "/collaborations",
+          "submenu": [
+            {
+              "name": "Lucchese x Nick Fouquet",
+              "url": "/collaborations/lucchese-x-nick-fouquet"
+            },
+            {
+              "name": "Lucchese x Parker McCollum",
+              "url": "/collaborations/lucchese-x-parker-mccollum"
+            },
+            {
+              "name": "Lucchese x Dallas Cowboys",
+              "url": "/collaborations/lucchese-x-dallas-cowboys"
+            },
+            {
+              "name": "Lucchese x UT Austin",
+              "url": "/collaborations/lucchese-x-ut-austin"
+            },
+            {
+              "name": "Lucchese x Texas A&M",
+              "url": "/collaborations/lucchese-x-texas-am"
+            },
+            {
+              "name": "Lucchese x Chris Stapleton",
+              "url": "/collaborations/lucchese-x-chris-stapleton"
+            }
+          ]
+        },
+        {
+          "id": "shop-the-look",
+          "name": "Shop the Look",
+          "url": "/shop-the-look",
+          "submenu": []
+        }
+      ],
+      "men": [
+        {
+          "id": "boots",
+          "name": "Boots",
+          "url": "/boots",
+          "submenu": [
+            { "name": "Shop All", "url": "/boots" },
+            { "name": "Best Sellers", "url": "/boots/best-sellers" },
+            { "name": "Cowboy", "url": "/boots/cowboy" },
+            { "name": "Horseman", "url": "/boots/horseman" },
+            { "name": "Roper", "url": "/boots/roper" },
+            { "name": "Barn Boots", "url": "/boots/barn-boots" },
+            { "name": "After Ride", "url": "/boots/after-ride" }
+          ]
+        },
+        {
+          "id": "shoes",
+          "name": "Shoes",
+          "url": "/shoes",
+          "submenu": [
+            { "name": "Shop All", "url": "/shoes" },
+            { "name": "Lace Up", "url": "/shoes/lace-up" },
+            { "name": "Zip Up", "url": "/shoes/zip-up" },
+            { "name": "Chukka", "url": "/shoes/chukka" },
+            { "name": "Chelsea", "url": "/shoes/chelsea" },
+            { "name": "Loafer", "url": "/shoes/loafer" }
+          ]
+        },
+        {
+          "id": "apparel",
+          "name": "Apparel",
+          "url": "/apparel",
+          "submenu": [
+            { "name": "Shop All", "url": "/apparel" },
+            { "name": "Denim", "url": "/apparel/denim" },
+            { "name": "Sport Coats", "url": "/apparel/sport-coats" },
+            { "name": "Tees", "url": "/apparel/tees" },
+            { "name": "Tops", "url": "/apparel/tops" },
+            { "name": "Bottoms", "url": "/apparel/bottoms" },
+            { "name": "Outerwear", "url": "/apparel/outerwear" }
+          ]
+        },
+        {
+          "id": "accessories",
+          "name": "Accessories",
+          "url": "/accessories",
+          "submenu": [
+            { "name": "Shop All", "url": "/accessories" },
+            { "name": "Travel", "url": "/accessories/travel" },
+            {
+              "name": "Small Leather Goods",
+              "url": "/accessories/small-leather-goods"
+            },
+            {
+              "name": "Belts & Belt Accessories",
+              "url": "/accessories/belts-and-belt-accessories"
+            },
+            { "name": "Cowboy Hats", "url": "/accessories/cowboy-hats" },
+            { "name": "Headwear", "url": "/accessories/headwear" },
+            { "name": "Scarves", "url": "/accessories/scarves" },
+            { "name": "Boot Care", "url": "/accessories/boot-care" }
+          ]
+        },
+        {
+          "id": "lifestyle",
+          "name": "Lifestyle",
+          "url": "/lifestyle",
+          "submenu": [
+            { "name": "Shop All", "url": "/lifestyle" },
+            { "name": "Leather Care", "url": "/lifestyle/leather-care" }
+          ]
+        },
+        {
+          "id": "collaborations",
+          "name": "Collaborations",
+          "url": "/collaborations",
+          "submenu": [
+            {
+              "name": "Lucchese x Nick Fouquet",
+              "url": "/collaborations/lucchese-x-nick-fouquet"
+            },
+            {
+              "name": "Lucchese x Parker McCollum",
+              "url": "/collaborations/lucchese-x-parker-mccollum"
+            },
+            {
+              "name": "Lucchese x Dallas Cowboys",
+              "url": "/collaborations/lucchese-x-dallas-cowboys"
+            },
+            {
+              "name": "Lucchese x UT Austin",
+              "url": "/collaborations/lucchese-x-ut-austin"
+            },
+            {
+              "name": "Lucchese x Texas A&M",
+              "url": "/collaborations/lucchese-x-texas-am"
+            },
+            {
+              "name": "Lucchese x Chris Stapleton",
+              "url": "/collaborations/lucchese-x-chris-stapleton"
+            }
+          ]
+        },
+        {
+          "id": "shop-the-look",
+          "name": "Shop the Look",
+          "url": "/shop-the-look",
+          "submenu": []
+        }
+      ]
+    },
+    "utilityMenu": [
+      {
+        "id": "store",
+        "name": "Store",
+        "url": "/store",
+        "icon": "location-dot"
+      },
+      {
+        "id": "search",
+        "name": "Search",
+        "url": "/search",
+        "icon": "search"
+      },
+      {
+        "id": "user",
+        "name": "User",
+        "url": "/account",
+        "icon": "user",
+        "submenu": [
+          {
+            "name": "Sign In / Register",
+            "url": "/account",
+            "icon": "user-circle-plus"
+          },
+          {
+            "name": "Order History",
+            "url": "/order-history",
+            "icon": "clock-counter-clockwise"
+          },
+          {
+            "name": "My Addresses",
+            "url": "/addresses",
+            "icon": "location-dot"
+          },
+          {
+            "name": "Account Settings",
+            "url": "/account-settings",
+            "icon": "gear"
+          },
+          {
+            "name": "Wishlists",
+            "url": "/wishlists",
+            "icon": "heart"
+          }
+        ]
+      },
+      {
+        "id": "wishlists",
+        "name": "Wishlist",
+        "url": "/wishlists",
+        "icon": "heart"
+      },
+      {
+        "id": "cart",
+        "name": "Shopping Cart",
+        "url": "/cart",
+        "icon": "cart"
+      }
+    ]
+  }
 }

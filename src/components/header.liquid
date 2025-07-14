@@ -1,0 +1,207 @@
+{% assign genders = "men,women" | split: "," %}
+
+<!-- Desktop header -->
+<header class="header sticky top-0 bg-white z-20 border-b border-neutral-200 hidden lg:block">
+  <div class="container max-w-[1548px] mx-auto px-4">
+    <div class="flex items-stretch justify-between">
+      <div class="flex flex-wrap max-w-[1150px] min-w-0 pt-1.5">
+        <div x-data="{ gender: 'men' }">
+          <div role="tablist" aria-label="Gender selection"
+            class="flex border-b border-neutral-400 max-w-max *:py-4 *:px-12 *:tracking-[2px] *:text-sm *:text-primary *:border-b-2 *:uppercase *:cursor-pointer">
+            {% for gender in genders %}
+            <button type="button" role="tab" :tabindex="gender === '{{ gender }}' ? 0 : -1"
+              :class="gender === '{{ gender }}' ? 'border-primary' : 'border-transparent'"
+              @click="gender = '{{ gender }}'">
+              {{ gender | capitalize }}
+            </button>
+            {% endfor %}
+          </div>
+
+          <template x-if="gender === 'men'">
+            {% include './nav-menu.liquid', menu_items: header.navigation.men, aria_label: "Men's category navigation"
+            %}
+          </template>
+
+          <template x-if="gender === 'women'">
+            {% include './nav-menu.liquid', menu_items: header.navigation.women, aria_label: "Women's category
+            navigation" %}
+          </template>
+        </div>
+      </div>
+
+      <div class="absolute start-[50%] translate-x-[-50%] py-2.5 px-3">
+        <a href="/" class="block max-w-[138px]" aria-label="Go to homepage">
+          <img src="/src/assets/logo.png" alt="Lucchese Logo" role="img" />
+        </a>
+      </div>
+
+      <div class="flex items-start justify-end">
+        {% for item in header.utilityMenu %}
+        {% if item.submenu %}
+        <div class="relative group">
+          <a href="{{ item.url }}"
+            class="w-[56px] h-[54px] flex items-center justify-center text-link border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
+            aria-label="{{ item.name }}">
+            <svg class="w-[24px] h-[24px] fill-current" aria-hidden="true">
+              <use xlink:href="#icon-{{ item.icon }}"></use>
+            </svg>
+          </a>
+          <ul
+            class="absolute right-0 top-full min-w-3xs bg-neutral-100 py-4 px-3 shadow-md z-10 hidden group-hover:block"
+            role="menu">
+            {% for subitem in item.submenu %}
+            <li role="none">
+              <a href="{{ subitem.url }}"
+                class="flex items-center gap-3 py-4 px-2 tracking-[2px] text-sm text-link hover:text-secondary uppercase cursor-pointer transition-colors duration-300"
+                role="menuitem" aria-label="{{ subitem.name }}">
+                <svg class="w-[24px] h-[24px] text-link" aria-hidden="true">
+                  <use xlink:href="#icon-{{ subitem.icon }}"></use>
+                </svg>
+                {{ subitem.name }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% else %}
+        <a href="{{ item.url }}"
+          class="w-[56px] h-[54px] flex items-center justify-center text-link border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
+          aria-label="{{ item.aria_label | default: item.name }}">
+          <svg class="w-[24px] h-[24px] fill-current" aria-hidden="true">
+            <use xlink:href="#icon-{{ item.icon }}"></use>
+          </svg>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile header -->
+<div class="mobile-header sticky top-0 bg-white z-20 py-[5px] flex items-center justify-between lg:hidden">
+  <div>
+    <button type="button" class="px-4 cursor-pointer" @click="
+    $store.menu.isMobileMenuOpen
+      ? ($store.menu.openSubmenuId = null, $store.menu.isMobileMenuOpen = false)
+      : ($store.menu.isMobileMenuOpen = true)
+  ">
+      <svg class="w-[24px] h-[24px] fill-current">
+        <use :href="$store.menu.isMobileMenuOpen ? '#icon-close' : '#icon-burger-menu'"></use>
+      </svg>
+    </button>
+    <div>
+      <div x-show="$store.menu.isMobileMenuOpen" x-transition:enter="transition transform duration-300"
+        x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition transform duration-300" x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="-translate-x-full"
+        class="fixed top-[64px] left-0 h-full bg-neutral-100 shadow-lg z-50 w-full max-w-full overflow-auto">
+        <div x-data="{ gender: 'men' }">
+          <div role="tablist" aria-label="Gender selection"
+            class="flex border-b border-neutral-400 max-w-full mx-4 *:py-4 *:px-12 *:tracking-[2px] *:text-sm *:text-primary *:border-b-2 *:uppercase *:cursor-pointer">
+            {% for gender in genders %}
+            <button type="button" role="tab" :tabindex="gender === '{{ gender }}' ? 0 : -1"
+              :class="gender === '{{ gender }}' ? 'border-primary' : 'border-transparent'" class="w-full"
+              @click="gender = '{{ gender }}'">
+              {{ gender | capitalize }}
+            </button>
+            {% endfor %}
+          </div>
+
+          <template x-if="gender === 'men'">
+            {% include './nav-menu.liquid', menu_items: header.navigation.men, aria_label: "Men's category navigation"
+            %}
+          </template>
+
+          <template x-if="gender === 'women'">
+            {% include './nav-menu.liquid', menu_items: header.navigation.women, aria_label: "Women's category
+            navigation" %}
+          </template>
+        </div>
+
+        <div class="border-t border-neutral-400 pt-3 mt-3">
+          <nav>
+            <ul class="tw-w-full flex flex-col">
+              {% for item in header.utilityMenu %}
+              {% unless item.name == 'Search' or item.name == 'Shopping Cart' %}
+              {% if item.submenu %}
+              <li tabindex="0" class="-order-1">
+                <span @click="$store.menu.openSubmenuId = '{{ category.id }}'" class="menu-link"
+                  aria-label="{{ item.name }}">
+                  <span class="flex items-center gap-3">
+                    <svg class="w-[24px] h-[24px] fill-current">
+                      <use xlink:href="#icon-{{ item.icon }}"></use>
+                    </svg>
+                    {{ item.name }}
+                  </span>
+                  <svg class="w-[24px] h-[24px] fill-current">
+                    <use xlink:href="#icon-chevron-right"></use>
+                  </svg>
+                </span>
+                <div x-show="$store.menu.openSubmenuId === '{{ category.id }}'"
+                  x-transition:enter="transition transform duration-300" x-transition:enter-start="translate-x-full"
+                  x-transition:enter-end="translate-x-0" x-transition:leave="transition transform duration-300"
+                  x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full"
+                  class="absolute right-0 top-[55px] min-w-full h-full bg-neutral-100 py-4 px-3 z-10">
+                  <button type="button"
+                    class="menu-sub-link items-center gap-2 w-full !px-0 mb-3 border-b border-neutral-400"
+                    @click="$store.menu.openSubmenuId = null">
+                    <svg class="w-[24px] h-[24px] text-neutral-700 rotate-180">
+                      <use xlink:href="#icon-chevron-right"></use>
+                    </svg>
+                    {{ item.name }}
+                  </button>
+                  <ul tabindex="-1" role="menu">
+                    {% for subitem in item.submenu %}
+                    <li role="none">
+                      <a href="{{ subitem.url }}" class="menu-sub-link" role="menuitem" aria-label="{{ subitem.name }}">
+                        <svg class="w-[24px] h-[24px] text-link" aria-hidden="true">
+                          <use xlink:href="#icon-{{ subitem.icon }}"></use>
+                        </svg>
+                        {{ subitem.name }}
+                      </a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+
+              </li>
+              {% else %}
+              <li tabindex="0" role="none">
+                <a href="{{ item.url }}" class="menu-link" aria-label="{{ item.name }}">
+                  <span class="flex items-center gap-3">
+                    <svg class="w-[24px] h-[24px] fill-current">
+                      <use xlink:href="#icon-{{ item.icon }}"></use>
+                    </svg>
+                    {{ item.name }}
+                  </span>
+                </a>
+              </li>
+              {% endif %}
+              {% endunless %}
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute start-[50%] translate-x-[-50%]">
+    <a href="/" class="block max-w-[141px]" aria-label="Go to homepage">
+      <img src="/src/assets/logo.png" alt="Lucchese Logo" role="img" />
+    </a>
+  </div>
+
+  <div class="flex items-start justify-end px-4">
+    {% for item in header.utilityMenu %}
+    {% if item.name == 'Search' or item.name == 'Shopping Cart' %}
+    <a href="{{ item.url }}" class="w-[44px] md:w-[56px] h-[54px] flex items-center justify-center text-link"
+      aria-label="{{ item.name }}">
+      <svg class="w-[24px] h-[24px] fill-current" aria-hidden="true">
+        <use xlink:href="#icon-{{ item.icon }}"></use>
+      </svg>
+    </a>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>

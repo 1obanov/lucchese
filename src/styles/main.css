@@ -116,14 +116,16 @@
   --color-secondary: #86754f;
   --color-link: #002855;
 
-  --color-gray-50: #fafafa;
-  --color-gray-75: #e8e7e7;
-  --color-gray-100: #dddddd;
-  --color-gray-200: #d9d9d9;
-  --color-gray-300: #c2c2c2;
-  --color-gray-400: #acaeb0;
-  --color-gray-700: #4d4d4d;
-  --color-gray-800: #525252;
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f1f3f4;
+  --color-neutral-200: #e8e7e7;
+  --color-neutral-300: #dddddd;
+  --color-neutral-400: #d9d9d9;
+  --color-neutral-500: #c2c2c2;
+  --color-neutral-600: #acaeb0;
+  --color-neutral-700: #999999;
+  --color-neutral-800: #4d4d4d;
+  --color-neutral-900: #525252;
 }
 
 html {
@@ -132,4 +134,12 @@ html {
 
 body {
   @apply font-brandonGrotesque;
+}
+
+.menu-link {
+  @apply text-sm lg:text-xs font-medium text-link lg:hover:text-secondary lg:border-b-2 lg:border-transparent lg:hover:border-primary flex items-center justify-between lg:block px-4 lg:px-6 p-4 lg:p-3 min-w-max uppercase tracking-[2px] cursor-default lg:cursor-pointer transition-colors duration-300;
+}
+
+.menu-sub-link {
+  @apply text-sm lg:text-base font-medium text-link lg:hover:text-secondary py-4 px-1 lg:px-3 flex items-center gap-2 uppercase lg:capitalize tracking-[2px] lg:tracking-normal transition-colors duration-300;
 }
