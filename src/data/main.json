@@ -277,5 +277,19 @@
         "icon": "cart"
       }
     ]
-  }
+  },
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "All",
+      "url": "/all"
+    },
+    {
+      "name": "Priscilla",
+      "url": null
+    }
+  ]
 }

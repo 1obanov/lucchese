@@ -1,0 +1,25 @@
+<nav aria-label="Breadcrumb">
+    <ul class="flex items-center" role="list">
+        {% for crumb in breadcrumb %}
+        <li class="flex items-center">
+            {% if crumb.url %}
+            <a href="{{ crumb.url }}" class="text-primary hover:text-secondary transition-colors duration-300">
+                {{ crumb.name }}
+            </a>
+            {% else %}
+            <span class="text-primary">
+                {{ crumb.name }}
+            </span>
+            {% endif %}
+
+            {% if forloop.last == false %}
+            <span class="inline-block mx-2 text-neutral-600" aria-hidden="true">
+                <svg class="w-[12px] h-[12px] fill-current" focusable="false" aria-hidden="true">
+                    <use xlink:href="#icon-slash"></use>
+                </svg>
+            </span>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

@@ -9,7 +9,21 @@
 
 <body x-data="{}">
     {% include '../components/header.liquid' %}
-    <main></main>
+    <main>
+        <div class="flex justify-between py-0 md:py-0 items-center max-w-[1548px] mx-auto px-4">
+            {% include '../components/breadcrumb.liquid' %}
+            <div class="flex items-center gap-4">
+                <span class="block w-px h-6 flex-basis-[1px] bg-neutral-400"></span>
+                <button
+                    class="flex items-center gap-2 text-xs text-primary font-medium uppercase tracking-[2.4px] h-12 py-2 cursor-pointer">
+                    Share
+                    <svg class="w-[24px] h-[24px] text-black">
+                        <use xlink:href="#icon-share"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
 
     <script src="/src/js/main.js" type="module"></script>
 </body>
