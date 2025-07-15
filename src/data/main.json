@@ -291,5 +291,62 @@
       "name": "Priscilla",
       "url": null
     }
+  ],
+  "infoLayout": [
+    {
+      "id": "size",
+      "title": "Size",
+      "text": [
+        "Lucchese boots generally run true to size, but don’t be surprised if your western boot’s size is slightly smaller than your dress shoe size due to its construction. Consult our Fit Guide for an expansive understanding of your true fit."
+      ],
+      "content": []
+    },
+    {
+      "id": "width",
+      "title": "Width",
+      "text": [
+        "Men's boots are sized in D and EE widths. <br> D = average to medium, EE = wide.",
+        "Women's boots are sized in A, B, and C widths. <br> A = narrow, B = average to medium, and C = wide.",
+        "A general rule of thumb is the further you get from the letter A, the wider the boot is."
+      ],
+      "content": []
+    },
+    {
+      "id": "toeHeel",
+      "title": "Toe & Heel",
+      "text": [
+        "Lucchese boots generally run true to size, but don’t be surprised if your western boot’s size is slightly smaller than your dress shoe size due to its construction. Consult our Fit Guide for an expansive understanding of your true fit."
+      ],
+      "content": [
+        {
+          "subtitle": "TOES",
+          "list": [
+            "Q TOE — Modeled as a hybrid toe, it is highlighted by its squared-off edge and low profile. (1 ¼” wide)",
+            "W TOE — Our modern square toe is found on walking & riding boots and is known for its comfort. (1 ½” wide)",
+            "7 WESTERN SQUARE TOE — A modern take on the classic western style, this square toe is one of our most popular. (⅞” wide)",
+            "6 MEDIUM ROUND TOE — A traditional rounded western toe, it is timeless and elegant.",
+            "5 - SNIP TOE — Originally made for getting in and out of a stirrup, the snip toe is pointed for a traditional look. (⅝” wide)",
+            "S TOE — Found on dress and casual styles; this rounded toe abuts a squared-off outsole for a distinguished look.",
+            "S5 - 5 TOE WITH A SPRING — Our 5 toe with a pronounced upward curvature of the toe box. (⅝” wide)",
+            "R - ROPER TOE — The roper toe is rounded and has a u-shape that is most like a normal shoe toe shape.",
+            "C TOE — Similar to the roper toe, the C toe has a slightly less rounded u-shape; often found on work boots.",
+            "X1 - FRENCH TOE — Found on dress boots; this rounded toe abuts a squared-off outsole for a distinguished look. (1” wide)",
+            "Z TOE — The narrow rounded toe is close to a common dress shoe as it narrows.",
+            "2 TOE — A more narrow rounded toe that almost comes to a point is found on traditional western styles.",
+            "K TOE — This is a rounded toe with a defined squared-off outsole for contrast."
+          ]
+        },
+        {
+          "subtitle": "HEELS",
+          "list": [
+            "0 heel — (⅞” tall)",
+            "3 Walking heel — (1 ½” tall)",
+            "4 Cowboy heel — (1 ¾” tall)",
+            "9 Roper with pitch — (1” tall)",
+            "8 Fowler heel with a pitch — (1 ⅛” tall)"
+          ]
+        }
+      ]
+    }
   ]
 }

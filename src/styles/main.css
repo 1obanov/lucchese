@@ -1,3 +1,4 @@
+@import "swiper/css/bundle";
 @import "tailwindcss";
 
 @font-face {
@@ -142,4 +143,20 @@ body {
 
 .menu-sub-link {
   @apply text-sm lg:text-base font-medium text-link lg:hover:text-secondary py-4 px-1 lg:px-3 flex items-center gap-2 uppercase lg:capitalize tracking-[2px] lg:tracking-normal transition-colors duration-300;
+}
+
+.button-primary {
+  @apply bg-primary hover:bg-primary/75 text-white text-sm uppercase font-normal tracking-[2px] px-4 py-5 cursor-pointer transition-colors duration-300;
+}
+
+.button-primary-outline {
+  @apply bg-white text-primary text-sm border border-primary hover:border-primary/75 uppercase font-normal tracking-[2px] p-4 cursor-pointer transition-colors duration-300;
+}
+
+.swiper-slide-thumb-active {
+  @apply border-b-2 border-primary;
+}
+
+.badge-best-seller {
+  @apply absolute top-4 left-4 bg-neutral-100 px-2 border-1 uppercase text-sm z-3;
 }

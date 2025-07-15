@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/src/styles/main.css">
 </head>
 
-<body x-data="{}">
+<body x-data="productPage()" x-init="init()">
     {% include '../components/header.liquid' %}
     <main>
         <div class="flex justify-between py-0 md:py-0 items-center max-w-[1548px] mx-auto px-4">
@@ -23,7 +23,14 @@
                 </button>
             </div>
         </div>
+        <template x-if="isProductLoaded">
+            <div class="template-product">
+                {% include '../components/product-info.liquid' %}
+            </div>
+        </template>
     </main>
+
+    {% include '../components/size-selector-overlay.liquid' %}
 
     <script src="/src/js/main.js" type="module"></script>
 </body>

@@ -83,8 +83,8 @@
   <div>
     <button type="button" class="px-4 cursor-pointer" @click="
     $store.menu.isMobileMenuOpen
-      ? ($store.menu.openSubmenuId = null, $store.menu.isMobileMenuOpen = false)
-      : ($store.menu.isMobileMenuOpen = true)
+      ? ($store.menu.closeSubmenu(), $store.menu.closeMobileMenu())
+      : ($store.menu.openMobileMenu())
   ">
       <svg class="w-[24px] h-[24px] fill-current">
         <use :href="$store.menu.isMobileMenuOpen ? '#icon-close' : '#icon-burger-menu'"></use>
@@ -126,8 +126,7 @@
               {% unless item.name == 'Search' or item.name == 'Shopping Cart' %}
               {% if item.submenu %}
               <li tabindex="0" class="-order-1">
-                <span @click="$store.menu.openSubmenuId = '{{ category.id }}'" class="menu-link"
-                  aria-label="{{ item.name }}">
+                <span @click="$store.menu.openSubmenu('{{ item.id }}')" class="menu-link" aria-label="{{ item.name }}">
                   <span class="flex items-center gap-3">
                     <svg class="w-[24px] h-[24px] fill-current">
                       <use xlink:href="#icon-{{ item.icon }}"></use>
@@ -138,14 +137,14 @@
                     <use xlink:href="#icon-chevron-right"></use>
                   </svg>
                 </span>
-                <div x-show="$store.menu.openSubmenuId === '{{ category.id }}'"
+                <div x-show="$store.menu.openSubmenuId === '{{ item.id }}'"
                   x-transition:enter="transition transform duration-300" x-transition:enter-start="translate-x-full"
                   x-transition:enter-end="translate-x-0" x-transition:leave="transition transform duration-300"
                   x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full"
                   class="absolute right-0 top-[55px] min-w-full h-full bg-neutral-100 py-4 px-3 z-10">
                   <button type="button"
                     class="menu-sub-link items-center gap-2 w-full !px-0 mb-3 border-b border-neutral-400"
-                    @click="$store.menu.openSubmenuId = null">
+                    @click="$store.menu.closeSubmenu()">
                     <svg class="w-[24px] h-[24px] text-neutral-700 rotate-180">
                       <use xlink:href="#icon-chevron-right"></use>
                     </svg>

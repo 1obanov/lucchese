@@ -10,10 +10,11 @@
   },
   "devDependencies": {
     "@vituum/vite-plugin-liquid": "^1",
-    "vituum": "^1",
-    "vite-plugin-svg-icons": "^2.0.1"
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vituum": "^1"
   },
   "dependencies": {
+    "@fancyapps/ui": "^6.0.12",
     "@tailwindcss/vite": "^4.1.11",
     "alpinejs": "^3.14.9",
     "swiper": "^11.2.10",

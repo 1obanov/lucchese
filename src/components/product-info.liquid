@@ -1,0 +1,187 @@
+<section
+    class="grid grid-cols-1 md:grid-cols-[50%_1fr] 2xl:grid-cols-[calc(50%+214px)_minmax(0,_560px)] items-start relative mb-16 md:mb-32">
+    <!-- Image gallery -->
+    <div class="gallery overflow-hidden">
+        <div class="swipe mainSlider w-full">
+            <div class="swiper-wrapper md:flex-col md:gap-[1px] !z-0 !h-auto">
+                <template x-for="(img, index) in currentVariant.images" :key="index">
+                    <div class="swiper-slide md:!h-auto" :class="{
+           'md:block': index < 5 || showMoreMedia,
+           'md:!hidden': index >= 5 && !showMoreMedia
+         }">
+                        <div class="picture relative">
+                            <template x-if="index === 0 && product.bestSeller">
+                                <div>
+                                    <span class="badge-best-seller">Best
+                                        Seller</span>
+                                    <button type="button"
+                                        class="absolute top-4 right-4 w-[48px] h-[48px] flex items-center justify-center cursor-pointer"
+                                        aria-label="Add to wishlist">
+                                        <svg class="w-[24px] h-[24px] fill-current" aria-hidden="true">
+                                            <use xlink:href="#icon-heart"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </template>
+                            <a data-fancybox="gallery" :href="img.jpg">
+                                <picture>
+                                    <source :srcset="img.webp" type="image/webp" />
+                                    <img :src="img.jpg" :alt="`Product image ${index + 1}`" />
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <template x-if="currentVariant.images.length > 5">
+            <div class="mt-6 hidden md:flex justify-center" x-ref="mediaSection">
+                <button type="button" @click="toggleShowMore()"
+                    class="button-primary-outline flex justify-center items-center gap-2 min-w-[288px]">
+                    <span x-text="showMoreMedia 
+    ? 'Show less media' 
+    : 'Show more media' + (currentVariant.images.length > 5 ? `(${currentVariant.images.length - 5})` : '')">
+                    </span>
+                    <svg class="w-[24px] h-[24px] text-neutral-800 transition-transform duration-300" :class="{
+           '-rotate-90': showMoreMedia,
+           'rotate-90': !showMoreMedia
+         }">
+                        <use xlink:href="#icon-chevron-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </template>
+
+        <div class="md:hidden mt-[1px]">
+            <div thumbsSlider="" class="swiper thumbsSlider w-full">
+                <div class="swiper-wrapper !h-auto">
+                    <template x-for="(img, index) in currentVariant.images" :key="index">
+                        <div class="swiper-slide">
+                            <picture>
+                                <source :srcset="img.webp" type="image/webp" />
+                                <img :src="img.jpg" :alt="`Product image ${index + 1}`" />
+                            </picture>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Info -->
+    <div class="md:sticky md:top-[111px] mt-6 md:mt-0 pt-1.5 px-4 md:pl-12">
+        <p class="text-base font-light text-neutral-800">
+            $<span x-text="product.price"></span>
+        </p>
+        <h1 class="text-3xl text-primary font-light uppercase tracking-wide mb-3" x-text="product.name">
+        </h1>
+        <span class="text-base font-light text-neutral-800 uppercase hidden md:block"
+            x-text="`Style no. ${currentVariant.sku}`"></span>
+
+        <div class="h-px my-6 bg-neutral-400 hidden md:block"></div>
+
+        <div class="variants flex flex-col gap-4 mt-6 md:mt-0">
+            <div>
+                <span class="text-neutral-800 pe-[4px]">Color:</span>
+                <span class="text-black" x-text="currentVariant.color"></span>
+            </div>
+            <ul class="colors flex flex-wrap gap-4">
+                <template x-for="color in colors" :key="color.name">
+                    <li>
+                        <button type="button" :class="{
+      'border-primary': color.name === currentVariant.color,
+      'border-neutral-400': color.name !== currentVariant.color
+    }" @click="selectColor(color.name)"
+                            class="w-[48px] h-[48px] flex items-center rounded-[50%] border border-neutral-400 hover:border-primary p-px cursor-pointer transition-colors duration-300"
+                            :aria-label="'Select color ' + color.name">
+                            <picture class="w-full h-full">
+                                <source :srcset="color.images[0].webp" type="image/webp" />
+                                <img :src="color.images[0].jpg" :alt="color.name"
+                                    class="w-full h-full rounded-full object-cover" />
+                            </picture>
+                        </button>
+                    </li>
+                </template>
+            </ul>
+        </div>
+
+        <div class="h-px my-6 bg-neutral-400 block md:hidden"></div>
+
+        <span class="text-base font-light text-neutral-800 uppercase block md:hidden"
+            x-text="currentVariant.sku"></span>
+
+        <div class="h-px my-6 bg-neutral-400"></div>
+
+        <p class="text-lg mb-5" x-text="currentVariant.description.text"></p>
+
+        <div class="bg-neutral-50 py-2 px-4">
+            <p class="text-sm font-light text-neutral-800 mb-2">Selected:</p>
+            <div class="flex justify-between items-center">
+                <span class="text-primary text-lg">
+                    Size: <span class="font-bold" x-text="selectedSize"></span>
+                </span>
+                <span class="block w-px h-4 flex-basis-[1px] bg-neutral-400"></span>
+                <span class="text-primary text-lg">
+                    Width:
+                    <span class="font-bold" x-text="selectedWidth"></span>
+                </span>
+                <span class="block w-px h-4 flex-basis-[1px] bg-neutral-400"></span>
+                <template x-if="currentVariant.hasToeHeelSize">
+                    <span class="text-primary text-lg">
+                        Toe + Heel:
+                        <span class="font-bold" x-text="selectedToeHeelSize || product.toeHeelSizes[0]"></span>
+                    </span>
+                </template>
+
+                <template x-if="currentVariant.hasCalfWidth">
+                    <span class="text-primary text-lg">
+                        Calf Width:
+                        <span class="font-bold" x-text="selectedCalfWidth || product.calfWidths[0]"></span>
+                    </span>
+                </template>
+            </div>
+        </div>
+        <button type="button" class="button-primary-outline flex justify-between items-center w-full mb-6"
+            @click="$store.sizePicker.open()">
+            Choose size
+            <svg class="w-[24px] h-[24px] fill-current">
+                <use xlink:href="#icon-chevron-right"></use>
+            </svg>
+        </button>
+
+        <button type="button" class="button-primary w-full mb-3">
+            Add to Cart - $<span x-text="product.price"></span>
+        </button>
+
+        <p class="text-center mb-3">
+            As low as $99/mo or 0% APR with Affirm.
+            <a href="#!" class="underline text-link hover:text-secondary transition-colors duration-300">Check
+                your purchasing power</a>
+        </p>
+
+        <div class="h-px my-6 bg-neutral-400"></div>
+
+        <button type="button" class="button-primary-outline flex justify-between items-center w-full mb-6">
+            Check availability in store
+            <svg class="w-[24px] h-[24px] fill-current">
+                <use xlink:href="#icon-location-dot"></use>
+            </svg>
+        </button>
+
+        <ul class="flex flex-col gap-6">
+            <li class="flex justify-center items-center gap-2 text-xs text-primary uppercase tracking-[2px]">
+                <svg class="w-[24px] h-[24px] fill-current">
+                    <use xlink:href="#icon-shipping"></use>
+                </svg>
+                Free shipping on orders over $100
+            </li>
+            <li class="flex justify-center items-center gap-2 text-xs text-primary uppercase tracking-[2px]">
+                <svg class="w-[24px] h-[24px] fill-current">
+                    <use xlink:href="#icon-return"></use>
+                </svg>
+                30-day return or exchange
+            </li>
+        </ul>
+    </div>
+</section>

@@ -28,7 +28,7 @@
     <ul class="tw-w-full block lg:hidden">
         {% for item in menu_items %}
         <li tabindex="0">
-            <span @click="$store.menu.openSubmenuId = '{{ item.id }}'" class="menu-link flex">
+            <span @click="$store.menu.openSubmenu('{{ item.id }}')" class="menu-link flex">
                 <span>{{ item.name }}</span>
                 <svg class="w-[24px] h-[24px] fill-current">
                     <use xlink:href="#icon-chevron-right"></use>
@@ -41,7 +41,7 @@
                 x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full"
                 class="absolute right-0 top-[55px] min-w-full h-full bg-neutral-100 py-4 px-3 z-10">
                 <button type="button" class="menu-sub-link w-full !px-0 mb-3 border-b border-neutral-400"
-                    @click="$store.menu.openSubmenuId = null">
+                    @click="$store.menu.closeSubmenu()">
                     <svg class="w-[24px] h-[24px] text-neutral-700 rotate-180">
                         <use xlink:href="#icon-chevron-right"></use>
                     </svg>
