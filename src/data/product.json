@@ -74,8 +74,8 @@
   ],
   "careImage": [
     {
-      "webp": "/src/assets/care.webp",
-      "jpg": "/src/assets/care.jpg"
+      "webp": "/src/assets/images/care.webp",
+      "jpg": "/src/assets/images/care.jpg"
     }
   ],
   "variants": [

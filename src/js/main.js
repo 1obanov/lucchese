@@ -170,6 +170,24 @@ document.addEventListener("alpine:init", () => {
     },
   });
 
+  Alpine.store("faqAccordion", {
+    openSections: [],
+
+    toggle(section) {
+      if (this.openSections.includes(section)) {
+        this.openSections = this.openSections.filter(
+          (openSection) => openSection !== section
+        );
+      } else {
+        this.openSections.push(section);
+      }
+    },
+
+    isOpen(section) {
+      return this.openSections.includes(section);
+    },
+  });
+
   Alpine.effect(() => {
     const menu = Alpine.store("menu");
     const sizePicker = Alpine.store("sizePicker");

@@ -1,0 +1,93 @@
+<div class="max-w-5xl mx-auto px-4 mb-16 md:mb-32">
+    <div>
+        <button type="button" @click="$store.faqAccordion.toggle('description')"
+            class="flex items-center justify-between w-full py-6 bg-white text-primary uppercase tracking-[1.96px] font-medium text-sm cursor-pointer border-b border-neutral-400 hover:border-primary transition-colors duration-300"
+            :class="{'border-primary': $store.faqAccordion.isOpen('description')}">
+            Description
+            <span class="icon">
+                <svg class="w-[24px] h-[24px] fill-current">
+                    <use :href="$store.faqAccordion.isOpen('description') ? '#icon-minus' : '#icon-plus'"></use>
+                </svg>
+            </span>
+        </button>
+        <div class="relative overflow-hidden transition-all max-h-0 duration-300" x-ref="description"
+            x-bind:style="$store.faqAccordion.isOpen('description') ? 'max-height: ' + $refs.description.scrollHeight + 'px' : ''">
+            <div class="content py-5">
+                <div class="content-text px-0 md:px-24 lg:px-34 pb-4.5">
+                    <p class="text-lg mb-6" x-text="currentVariant.description.text"></p>
+                    <ul class="ps-9 *:text-lg">
+                        <template x-for="(feature, index) in currentVariant.description.features" :key="feature">
+                            <li x-text="feature" class="list-disc" :class="{'mt-1': index !== 0}"></li>
+                        </template>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <template x-if="currentVariant.material">
+        <div>
+            <button type="button" @click="$store.faqAccordion.toggle('material')"
+                class="flex items-center justify-between w-full py-6 bg-white text-primary uppercase tracking-[1.96px] font-medium text-sm cursor-pointer border-b border-neutral-400 hover:border-primary transition-colors duration-300"
+                :class="{'border-primary': $store.faqAccordion.isOpen('material')}">
+                Material
+                <span class="icon">
+                    <svg class="w-[24px] h-[24px] fill-current">
+                        <use :href="$store.faqAccordion.isOpen('material') ? '#icon-minus' : '#icon-plus'"></use>
+                    </svg>
+                </span>
+            </button>
+            <div class="relative overflow-hidden transition-all max-h-0 duration-300" x-ref="material"
+                x-bind:style="$store.faqAccordion.isOpen('material') ? 'max-height: ' + $refs.material.scrollHeight + 'px' : ''">
+                <div class="content py-5">
+                    <div class="content-text px-0 md:px-24 lg:px-34 pb-4.5">
+                        <h3 class="text-3xl text-primary font-light mb-3" x-text="currentVariant.material.name"></h3>
+                        <p class="text-lg mb-6" x-text="currentVariant.material.text"></p>
+                    </div>
+                    <div class="content-image">
+                        <template x-for="(img, index) in currentVariant.material.images" :key="index">
+                            <picture>
+                                <source :srcset="img.webp" type="image/webp" />
+                                <img :src="img.jpg" :alt="currentVariant.material.name" />
+                            </picture>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template x-if="currentVariant.care">
+        <div>
+            <button type="button" @click="$store.faqAccordion.toggle('care')"
+                class="flex items-center justify-between w-full py-6 bg-white text-primary uppercase tracking-[1.96px] font-medium text-sm cursor-pointer border-b border-neutral-400 hover:border-primary transition-colors duration-300"
+                :class="{'border-primary': $store.faqAccordion.isOpen('care')}">
+                Care
+                <span class="icon">
+                    <svg class="w-[24px] h-[24px] fill-current">
+                        <use :href="$store.faqAccordion.isOpen('care') ? '#icon-minus' : '#icon-plus'"></use>
+                    </svg>
+                </span>
+            </button>
+            <div class="relative overflow-hidden transition-all max-h-0 duration-300" x-ref="care"
+                x-bind:style="$store.faqAccordion.isOpen('care') ? 'max-height: ' + $refs.care.scrollHeight + 'px' : ''">
+                <div class="content py-5">
+                    <div class="content-text px-0 md:px-24 lg:px-34 pb-4.5">
+                        <p class="font-bold text-xl mb-4">Instructions</p>
+                        <template x-for="(text, index) in currentVariant.care.text" :key="index">
+                            <p class="text-lg" x-text="text"></p>
+                        </template>
+                    </div>
+                    <div class="content-image">
+                        <template x-for="(img, index) in product.careImage" :key="index">
+                            <picture>
+                                <source :srcset="img.webp" type="image/webp" />
+                                <img :src="img.jpg" :alt="product.name" />
+                            </picture>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</div>
