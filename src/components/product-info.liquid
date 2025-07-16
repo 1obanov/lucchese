@@ -72,7 +72,7 @@
     <!-- Product Info -->
     <div class="md:sticky md:top-[111px] mt-6 md:mt-0 pt-1.5 px-4 md:pl-12">
         <p class="text-base font-light text-neutral-800">
-            $<span x-text="product.price"></span>
+            $<span x-text="product.price.toLocaleString()"></span>
         </p>
         <h1 class="text-3xl text-primary font-light uppercase tracking-wide mb-3" x-text="product.name">
         </h1>
@@ -151,7 +151,7 @@
         </button>
 
         <button type="button" class="button-primary w-full mb-3">
-            Add to Cart - $<span x-text="product.price"></span>
+            Add to Cart - $<span x-text="product.price.toLocaleString()"></span>
         </button>
 
         <p class="text-center mb-3">
