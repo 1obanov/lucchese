@@ -1,0 +1,60 @@
+<footer class="bg-link text-white px-4 py-8">
+  <div class="max-w-[1308px] mx-auto mb-16 md:mb-4">
+    <div class="flex flex-col md:flex-row gap-0 md:gap-3 xl:gap-0">
+      {% for block in footer.footerMenu %}
+      <div class="xl:ms-[1.56%] basis-full xl:basis-[18.1%]">
+        <h3 class="mb-2.5 md:mb-3">
+          <button type="button" @click="$store.footerMenu.toggle('{{ block.id }}')"
+            class="flex items-center justify-between md:block w-full text-left md:cursor-default md:pointer-events-none font-bold uppercase text-sm tracking-[2px] py-3 md:py-0">
+            {{ block.title }}
+            <svg class="w-[10px] h-[24px] fill-current md:hidden transition-transform duration-300 transform"
+              :class="$store.footerMenu.isOpen('{{ block.id }}') ? 'rotate-180' : 'rotate-0'">
+              <use xlink:href="#icon-down-caret"></use>
+            </svg>
+          </button>
+        </h3>
+        <div x-ref="{{ block.id }}"
+          x-bind:style="$store.footerMenu.isOpen('{{ block.id }}') ? 'max-height: ' + $refs.{{ block.id }}.scrollHeight + 'px' : ''"
+          class="relative overflow-hidden transition-all max-h-0 md:max-h-max duration-300">
+          <ul class="*:not-last:mb-[10px] mb-2.5 md:mb-0">
+            {% for item in block.items %}
+            <li>
+              <a href="{{ item.url }}" class="footer-link">{{ item.name }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="social px-0 2xl:px-8 mb-16 md:mb-11">
+    <ul class="flex items-center md:justify-end gap-8">
+      {% for icon in footer.socialIcons %}
+      <li>
+        <a href="{{ icon.url }}" target="_blank" class="text-white hover:text-white/75 transition-colors duration-300"
+          aria-label="{{ icon.name }}">
+          <svg class="w-[24px] h-[24px] fill-current">
+            <use xlink:href="#icon-{{ icon.id }}"></use>
+          </svg>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="flex items-start md:items-center justify-between flex-col-reverse md:flex-row gap-4">
+    <p class="text-[10px] text-neutral-600 uppercase tracking-[1px]">
+      {{ footer.bottomNavigation.copyright }}
+    </p>
+    <ul class="flex items-start md:items-center flex-col md:flex-row gap-0 md:gap-3 lg:gap-6">
+      {% for link in footer.bottomNavigation.footerLinks %}
+      <li>
+        <a href="{{ link.url }}"
+          class="block text-[10px] text-neutral-600 hover:text-neutral-500 uppercase underline py-4 md:py-0 transition-colors duration-300">
+          {{ link.name }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</footer>

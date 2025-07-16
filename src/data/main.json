@@ -348,5 +348,182 @@
         }
       ]
     }
-  ]
+  ],
+  "footer": {
+    "footerMenu": [
+      {
+        "id": "about",
+        "title": "About",
+        "items": [
+          {
+            "id": "since-1883",
+            "name": "Since 1883",
+            "url": "/about/since-1883"
+          },
+          {
+            "id": "our-process",
+            "name": "Our Process",
+            "url": "/about/our-process"
+          },
+          { "id": "blog", "name": "Blog", "url": "/blog" },
+          { "id": "careers", "name": "Careers", "url": "/careers" }
+        ]
+      },
+      {
+        "id": "help",
+        "title": "Help",
+        "items": [
+          {
+            "id": "my-account",
+            "name": "My Account",
+            "url": "/help/my-account"
+          },
+          {
+            "id": "track-your-order",
+            "name": "Track Your Order",
+            "url": "/help/track-your-order"
+          },
+          {
+            "id": "shipping-information",
+            "name": "Shipping Information",
+            "url": "/help/shipping-information"
+          },
+          {
+            "id": "returns-exchanges-faqs",
+            "name": "Returns & Exchanges FAQs",
+            "url": "/help/returns-exchanges-faqs"
+          },
+          {
+            "id": "make-return-exchange",
+            "name": "Make A Return Or Exchange",
+            "url": "/help/make-a-return-or-exchange"
+          },
+          {
+            "id": "military-discount",
+            "name": "Military Discount",
+            "url": "/help/military-discount"
+          },
+          {
+            "id": "financing-options",
+            "name": "Financing Options",
+            "url": "/help/financing-options"
+          },
+          { "id": "repairs", "name": "Repairs", "url": "/help/repairs" },
+          { "id": "warranty", "name": "Warranty", "url": "/help/warranty" }
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Contact",
+        "items": [
+          { "id": "faqs", "name": "FAQs", "url": "/contact/faqs" },
+          {
+            "id": "how-to-reach-us",
+            "name": "How To Reach Us",
+            "url": "/contact/how-to-reach-us"
+          },
+          { "id": "email-us", "name": "Email Us", "url": "/contact/email-us" },
+          {
+            "id": "lucchese-stores",
+            "name": "Lucchese Stores",
+            "url": "/contact/lucchese-stores"
+          },
+          {
+            "id": "lucchese-corporate-sales",
+            "name": "Lucchese Corporate Sales",
+            "url": "/contact/lucchese-corporate-sales"
+          }
+        ]
+      },
+      {
+        "id": "boot",
+        "title": "BOOT 101",
+        "items": [
+          {
+            "id": "boot-fit",
+            "name": "Boot Fit",
+            "url": "/boot-101/boot-fit"
+          },
+          {
+            "id": "boot-anatomy",
+            "name": "Boot Anatomy",
+            "url": "/boot-101/boot-anatomy"
+          },
+          {
+            "id": "boot-maintenance-care",
+            "name": "Boot Maintenance and Care",
+            "url": "/boot-101/boot-maintenance-care"
+          },
+          {
+            "id": "boot-toe-heel-options",
+            "name": "Boot Toe and Heel Options",
+            "url": "/boot-101/boot-toe-heel-options"
+          },
+          {
+            "id": "boot-materials",
+            "name": "Boot Materials",
+            "url": "/boot-101/boot-materials"
+          }
+        ]
+      }
+    ],
+    "socialIcons": [
+      {
+        "id": "instagram",
+        "name": "Instagram",
+        "url": "https://www.instagram.com/lucchese"
+      },
+      {
+        "id": "facebook",
+        "name": "Facebook",
+        "url": "https://www.facebook.com/lucchesebootmaker"
+      },
+      {
+        "id": "twitter",
+        "name": "Twitter",
+        "url": "https://twitter.com/lucchese1883"
+      },
+      {
+        "id": "pinterest",
+        "name": "Pinterest",
+        "url": "https://www.pinterest.com/lucchese1883"
+      },
+      { "id": "vimeo", "name": "Vimeo", "url": "https://vimeo.com/lucchese" },
+      {
+        "id": "youtube",
+        "name": "YouTube",
+        "url": "https://www.youtube.com/channel/UCOJ7dMike94XBcDWfAj-LbQ/videos"
+      }
+    ],
+    "bottomNavigation": {
+      "copyright": "© 2025 Lucchese brand, llc",
+      "footerLinks": [
+        {
+          "id": "terms-of-service",
+          "name": "Terms of Service",
+          "url": "/terms-of-service"
+        },
+        {
+          "id": "privacy-policy",
+          "name": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "id": "do-not-sell-my-information",
+          "name": "Do Not Sell My Information",
+          "url": "/do-not-sell-my-information"
+        },
+        {
+          "id": "accessibility-statement",
+          "name": "Accessibility Statement",
+          "url": "/accessibility-statement"
+        },
+        {
+          "id": "manage-cookies",
+          "name": "Manage Cookies",
+          "url": "/manage-cookies"
+        }
+      ]
+    }
+  }
 }

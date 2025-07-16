@@ -44,7 +44,7 @@ function productPage() {
         this.currentRecommendations = this.recommendations.map(
           (rec) => rec.variants[0]
         );
-        
+
         this.colors = this.product?.colors ?? [];
 
         this.setDefaultSelections();
@@ -234,6 +234,22 @@ document.addEventListener("alpine:init", () => {
 
     isOpen(section) {
       return this.openSections.includes(section);
+    },
+  });
+
+  Alpine.store("footerMenu", {
+    openIds: [],
+
+    toggle(id) {
+      if (this.openIds.includes(id)) {
+        this.openIds = this.openIds.filter((openId) => openId !== id);
+      } else {
+        this.openIds.push(id);
+      }
+    },
+
+    isOpen(id) {
+      return this.openIds.includes(id);
     },
   });
 

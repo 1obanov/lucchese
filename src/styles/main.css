@@ -160,3 +160,7 @@ body {
 .badge-best-seller {
   @apply absolute top-4 left-4 bg-neutral-100 px-2 border-1 uppercase text-sm z-3;
 }
+
+.footer-link {
+  @apply block py-4 md:py-0 hover:text-gray-300 transition-colors duration-300;
+}
