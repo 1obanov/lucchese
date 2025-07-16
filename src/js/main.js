@@ -21,15 +21,30 @@ function productPage() {
     selectedToeHeelSize: null,
     selectedCalfWidth: null,
     isProductLoaded: false,
+    recommendations: null,
+    currentRecommendations: null,
     showMoreMedia: false,
 
     async init() {
+      const fetchJson = async (url) => {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
+        return res.json();
+      };
       try {
-        const res = await fetch("/src/data/product.json");
-        const productData = await res.json();
+        const [productData, recommendationsData] = await Promise.all([
+          fetchJson("/src/data/product.json"),
+          fetchJson("/src/data/recommendations.json"),
+        ]);
 
         this.product = productData;
         this.currentVariant = this.product?.variants?.[0] ?? null;
+
+        this.recommendations = recommendationsData;
+        this.currentRecommendations = this.recommendations.map(
+          (rec) => rec.variants[0]
+        );
+        
         this.colors = this.product?.colors ?? [];
 
         this.setDefaultSelections();
@@ -43,6 +58,8 @@ function productPage() {
             this.handleSwiper();
           });
         });
+
+        this.initRecommendationsSlider();
 
         Fancybox.bind("[data-fancybox]", {});
       } catch (error) {
@@ -89,6 +106,23 @@ function productPage() {
       }
     },
 
+    initRecommendationsSlider() {
+      const recommendationsSlider = new Swiper(".recommendationsSlider", {
+        loop: true,
+        spaceBetween: 2,
+        slidesPerView: 1.1,
+        navigation: {
+          nextEl: ".button-next",
+          prevEl: ".button-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+        },
+      });
+    },
+
     selectColor(color) {
       const variant = this.product.variants.find((v) => v.color === color);
       if (variant) {
@@ -96,6 +130,21 @@ function productPage() {
       }
 
       this.setDefaultSelections();
+    },
+
+    selectRecommendationColor(index, colorName) {
+      const original = this.recommendations[index];
+      const matchingVariant = original.variants.find(
+        (variant) => variant.color === colorName
+      );
+
+      if (matchingVariant) {
+        this.currentRecommendations[index] = {
+          ...original,
+          ...matchingVariant,
+          color: colorName,
+        };
+      }
     },
 
     setValue(field, value) {

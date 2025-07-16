@@ -1,0 +1,234 @@
+[
+  {
+    "id": "dallas",
+    "name": "Dallas",
+    "price": 150,
+    "bestSeller": true,
+    "colors": [
+      {
+        "name": "White",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/dallas/dallas-white.webp",
+            "jpg": "/src/assets/images/recommendations/dallas/dallas-white.jpg"
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "dallas-white",
+        "url": "https://www.lucchese.com/products/dallas-white",
+        "color": "White",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/dallas/dallas-1.webp",
+            "jpg": "/src/assets/images/recommendations/dallas/dallas-1.jpg"
+          },
+          {
+            "webp": "/src/assets/images/recommendations/dallas/dallas-2.webp",
+            "jpg": "/src/assets/images/recommendations/dallas/dallas-2.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lilah",
+    "name": "Lilah",
+    "price": 325,
+    "bestSeller": false,
+    "colors": [
+      {
+        "name": "Black",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/lilah/lilah-black.webp",
+            "jpg": "/src/assets/images/recommendations/lilah/lilah-black.jpg"
+          }
+        ]
+      },
+      {
+        "name": "Chocolate",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/lilah/lilah-chocolate.webp",
+            "jpg": "/src/assets/images/recommendations/lilah/lilah-chocolate.jpg"
+          }
+        ]
+      },
+      {
+        "name": "Cream",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/lilah/lilah-cream.webp",
+            "jpg": "/src/assets/images/recommendations/lilah/lilah-cream.jpg"
+          }
+        ]
+      },
+      {
+        "name": "Crimson",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/lilah/lilah-crimson.webp",
+            "jpg": "/src/assets/images/recommendations/lilah/lilah-crimson.jpg"
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "lilah-black",
+        "url": "https://www.lucchese.com/products/lilah-black",
+        "color": "Black",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/lilah/lilah-1.webp",
+            "jpg": "/src/assets/images/recommendations/lilah/lilah-1.jpg"
+          },
+          {
+            "webp": "/src/assets/images/recommendations/lilah/lilah-2.webp",
+            "jpg": "/src/assets/images/recommendations/lilah/lilah-2.jpg"
+          }
+        ]
+      },
+      {
+        "id": "lilah-chocolate",
+        "url": "https://www.lucchese.com/products/lilah-chocolate",
+        "color": "Chocolate",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/lilah/lilah-3.webp",
+            "jpg": "/src/assets/images/recommendations/lilah/lilah-3.jpg"
+          },
+          {
+            "webp": "/src/assets/images/recommendations/lilah/lilah-4.webp",
+            "jpg": "/src/assets/images/recommendations/lilah/lilah-4.jpg"
+          }
+        ]
+      },
+      {
+        "id": "lilah-cream",
+        "url": "https://www.lucchese.com/products/lilah-cream",
+        "color": "Cream",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/lilah/lilah-5.webp",
+            "jpg": "/src/assets/images/recommendations/lilah/lilah-5.jpg"
+          },
+          {
+            "webp": "/src/assets/images/recommendations/lilah/lilah-6.webp",
+            "jpg": "/src/assets/images/recommendations/lilah/lilah-6.jpg"
+          }
+        ]
+      },
+      {
+        "id": "lilah-crimson",
+        "url": "https://www.lucchese.com/products/lilah-crimson",
+        "color": "Crimson",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/lilah/lilah-7.webp",
+            "jpg": "/src/assets/images/recommendations/lilah/lilah-7.jpg"
+          },
+          {
+            "webp": "/src/assets/images/recommendations/lilah/lilah-8.webp",
+            "jpg": "/src/assets/images/recommendations/lilah/lilah-8.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ace-high",
+    "name": "Ace High",
+    "price": 2895,
+    "bestSeller": true,
+    "colors": [
+      {
+        "name": "Black",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/ace-high/ace-high-black.webp",
+            "jpg": "/src/assets/images/recommendations/ace-high/ace-high-black.jpg"
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "ace-high-black",
+        "url": "https://www.lucchese.com/products/ace-high-black",
+        "color": "Black",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/ace-high/ace-high-1.webp",
+            "jpg": "/src/assets/images/recommendations/ace-high/ace-high-1.jpg"
+          },
+          {
+            "webp": "/src/assets/images/recommendations/ace-high/ace-high-2.webp",
+            "jpg": "/src/assets/images/recommendations/ace-high/ace-high-2.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reese-womens-snap-shirt",
+    "name": "Reese Women's Snap Shirt",
+    "price": 225,
+    "bestSeller": false,
+    "colors": [
+      {
+        "name": "Alamo",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-alamo.webp",
+            "jpg": "/src/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-alamo.jpg"
+          }
+        ]
+      },
+      {
+        "name": "Blue bird wash",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-blue-bird-wash.webp",
+            "jpg": "/src/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-blue-bird-wash.jpg"
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "reese-womens-snap-shirt-alamo",
+        "url": "https://www.lucchese.com/products/reese-womens-snap-shirt-alamo",
+        "color": "Alamo",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-3.webp",
+            "jpg": "/src/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-3.jpg"
+          },
+          {
+            "webp": "/src/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-4.webp",
+            "jpg": "/src/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-4.jpg"
+          }
+        ]
+      },
+      {
+        "id": "reese-womens-snap-shirt-blue-bird-wash",
+        "url": "https://www.lucchese.com/products/reese-womens-snap-shirt-blue-bird-wash",
+        "color": "Blue bird wash",
+        "images": [
+          {
+            "webp": "/src/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-1.webp",
+            "jpg": "/src/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-1.jpg"
+          },
+          {
+            "webp": "/src/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-2.webp",
+            "jpg": "/src/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-2.jpg"
+          }
+        ]
+      }
+    ]
+  }
+]
