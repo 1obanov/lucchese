@@ -24,6 +24,8 @@ function productPage() {
     recommendations: null,
     currentRecommendations: null,
     showMoreMedia: false,
+    cart: JSON.parse(localStorage.getItem("cart")) || [],
+    addedToCart: false,
 
     async init() {
       const fetchJson = async (url) => {
@@ -175,6 +177,117 @@ function productPage() {
         });
       }
     },
+
+    addToCart() {
+      const existingIndex = this.cart.findIndex((item) => {
+        const isSameProduct =
+          item.id === this.currentVariant.id &&
+          item.color === this.currentVariant.color &&
+          item.size === this.selectedSize &&
+          item.width === this.selectedWidth;
+
+        const isSameToeHeelSize = this.currentVariant.hasToeHeelSize
+          ? item.toeHeelSize === this.selectedToeHeelSize
+          : true;
+
+        const isSameCalfWidth = this.currentVariant.hasCalfWidth
+          ? item.calfWidth === this.selectedCalfWidth
+          : true;
+
+        return isSameProduct && isSameToeHeelSize && isSameCalfWidth;
+      });
+
+      if (existingIndex > -1) {
+        this.cart[existingIndex].quantity++;
+      } else {
+        const newItem = {
+          id: this.currentVariant.id,
+          name: this.product.name,
+          price: this.product.price,
+          url: this.currentVariant.url,
+          color: this.currentVariant.color,
+          image: this.currentVariant.images[0],
+          size: this.selectedSize,
+          width: this.selectedWidth,
+          quantity: 1,
+        };
+
+        if (this.currentVariant.hasToeHeelSize) {
+          newItem.toeHeelSize = this.selectedToeHeelSize;
+        }
+
+        if (this.currentVariant.hasCalfWidth) {
+          newItem.calfWidth = this.selectedCalfWidth;
+        }
+
+        this.cart.push(newItem);
+      }
+
+      localStorage.setItem("cart", JSON.stringify(this.cart));
+
+      this.addedToCart = true;
+      setTimeout(() => (this.addedToCart = false), 2000);
+    },
+
+    isSameCartItem(cartItem, productItem) {
+      return (
+        cartItem.id === productItem.id &&
+        cartItem.size === productItem.size &&
+        cartItem.width === productItem.width &&
+        cartItem.toeHeelSize === productItem.toeHeelSize &&
+        cartItem.calfWidth === productItem.calfWidth
+      );
+    },
+
+    incrementQuantity(product) {
+      const item = this.cart.find((i) => this.isSameCartItem(i, product));
+      if (item) {
+        item.quantity++;
+        localStorage.setItem("cart", JSON.stringify(this.cart));
+      }
+    },
+
+    decrementQuantity(product) {
+      const index = this.cart.findIndex((i) => this.isSameCartItem(i, product));
+
+      if (index !== -1) {
+        if (this.cart[index].quantity > 1) {
+          this.cart[index].quantity--;
+        } else {
+          this.cart.splice(index, 1);
+        }
+
+        localStorage.setItem("cart", JSON.stringify(this.cart));
+      }
+    },
+
+    changeQuantity(product, value) {
+      const quantity = parseInt(value, 10);
+      if (isNaN(quantity) || quantity < 1) return;
+
+      const item = this.cart.find((i) => this.isSameCartItem(i, product));
+
+      if (item) {
+        item.quantity = quantity;
+        localStorage.setItem("cart", JSON.stringify(this.cart));
+      }
+    },
+
+    removeFromCart(product) {
+      const index = this.cart.findIndex((i) => this.isSameCartItem(i, product));
+
+      if (index !== -1) {
+        this.cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(this.cart));
+      }
+    },
+
+    cartTotal() {
+      return this.cart.reduce(
+        (total, item) => total + item.price * item.quantity,
+        0
+      );
+    },
   };
 }
 
@@ -257,13 +370,26 @@ document.addEventListener("alpine:init", () => {
     isAddToCartVisible: true,
   });
 
+  Alpine.store("miniCart", {
+    isCartOpen: false,
+    open() {
+      this.isCartOpen = true;
+    },
+    close() {
+      this.isCartOpen = false;
+    },
+  });
+
   Alpine.effect(() => {
     const menu = Alpine.store("menu");
     const sizePicker = Alpine.store("sizePicker");
+    const miniCart = Alpine.store("miniCart");
 
     document.body.classList.toggle(
       "overflow-hidden",
-      menu.isMobileMenuOpen || sizePicker.isChooseSizeOpen
+      menu.isMobileMenuOpen ||
+        sizePicker.isChooseSizeOpen ||
+        miniCart.isCartOpen
     );
   });
 

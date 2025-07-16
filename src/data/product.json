@@ -81,6 +81,7 @@
   "variants": [
     {
       "id": "priscilla-espresso",
+      "url": "https://www.lucchese.com/products/priscilla-suede-espresso",
       "sku": "GY4579.S54-2019-B-6",
       "color": "Espresso",
       "description": {
@@ -156,6 +157,7 @@
     },
     {
       "id": "priscilla-glitz-cream",
+      "url": "https://www.lucchese.com/products/priscilla-glitz-cream",
       "sku": "GY4580.S54-2019-B-6",
       "color": "Glitz Cream",
       "description": {
@@ -213,6 +215,7 @@
     },
     {
       "id": "priscilla-red",
+      "url": "https://www.lucchese.com/products/priscilla-red",
       "sku": "GY4581.S54-2019-B-6",
       "color": "Red",
       "description": {
@@ -272,6 +275,7 @@
     },
     {
       "id": "priscilla-black",
+      "url": "https://www.lucchese.com/products/priscilla-black",
       "sku": "GY4582.S54-2019-B-6",
       "color": "Black",
       "description": {
@@ -331,6 +335,7 @@
     },
     {
       "id": "priscilla-brown",
+      "url": "https://www.lucchese.com/products/priscilla-brown",
       "sku": "GY4583.S54-2019-B-6",
       "color": "Brown",
       "description": {
@@ -390,6 +395,7 @@
     },
     {
       "id": "priscilla-crinkle-patent-black",
+      "url": "https://www.lucchese.com/products/priscilla-crinkle-patent-black",
       "sku": "GY4584.S54-2019-B-6",
       "color": "Crinkle Patent Black",
       "description": {
@@ -453,6 +459,7 @@
     },
     {
       "id": "priscilla-red-luster",
+      "url": "https://www.lucchese.com/products/priscilla-red-luster",
       "sku": "GY4585.S54-2019-B-6",
       "color": "Red Luster",
       "description": {

@@ -164,3 +164,36 @@ body {
 .footer-link {
   @apply block py-4 md:py-0 hover:text-gray-300 transition-colors duration-300;
 }
+
+.draw-checkmark {
+  stroke-dasharray: 19.79;
+  stroke-dashoffset: 19.79;
+  animation: drawCheckmark 0.5s linear forwards;
+}
+
+.pulse {
+  animation: quantityPulse 0.5s linear;
+}
+
+@keyframes drawCheckmark {
+  0% {
+    stroke-dashoffset: 19.79;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes quantityPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

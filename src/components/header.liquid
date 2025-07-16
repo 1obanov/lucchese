@@ -64,6 +64,17 @@
           </ul>
         </div>
         {% else %}
+        {% if item.id == "cart" %}
+        <button @click="$store.miniCart.open()" type="button"
+          class="relative w-[56px] h-[54px] flex items-center justify-center cursor-pointer">
+          <svg class="w-[24px] h-[24px] fill-current" aria-hidden="true">
+            <use xlink:href="#icon-{{ item.icon }}"></use>
+          </svg>
+          <span x-show="cart.length > 0" :class="{'pulse': addedToCart}"
+            class="quantity absolute top-2 right-2.5 text-[11px]/[11px] text-white font-light tracking-tight bg-secondary border-2 border-white min-w-5 min-h-5 rounded-[50%] flex items-center justify-center"
+            x-text="cart.length"></span>
+        </button>
+        {% else %}
         <a href="{{ item.url }}"
           class="w-[56px] h-[54px] flex items-center justify-center text-link border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
           aria-label="{{ item.aria_label | default: item.name }}">
@@ -71,6 +82,7 @@
             <use xlink:href="#icon-{{ item.icon }}"></use>
           </svg>
         </a>
+        {% endif %}
         {% endif %}
         {% endfor %}
       </div>
@@ -194,12 +206,25 @@
   <div class="flex items-start justify-end px-4">
     {% for item in header.utilityMenu %}
     {% if item.name == 'Search' or item.name == 'Shopping Cart' %}
+    {% if item.id == "cart" %}
+    <button @click="$store.miniCart.open(); $store.menu.closeMobileMenu();" type="button"
+      class="relative w-[44px] md:w-[56px] h-[54px] flex items-center justify-center text-link cursor-pointer"
+      aria-label="{{ item.name }}">
+      <svg class="w-[24px] h-[24px] fill-current" aria-hidden="true">
+        <use xlink:href="#icon-{{ item.icon }}"></use>
+      </svg>
+      <span x-show="cart.length > 0" :class="{'pulse': addedToCart}"
+        class="quantity absolute top-2 right-1 md:right-2.5 text-[11px]/[11px] text-white font-light tracking-tight bg-secondary border-2 border-white min-w-5 min-h-5 rounded-[50%] flex items-center justify-center"
+        x-text="cart.length"></span>
+    </button>
+    {% else %}
     <a href="{{ item.url }}" class="w-[44px] md:w-[56px] h-[54px] flex items-center justify-center text-link"
       aria-label="{{ item.name }}">
       <svg class="w-[24px] h-[24px] fill-current" aria-hidden="true">
         <use xlink:href="#icon-{{ item.icon }}"></use>
       </svg>
     </a>
+    {% endif %}
     {% endif %}
     {% endfor %}
   </div>
