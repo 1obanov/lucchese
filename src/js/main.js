@@ -253,6 +253,10 @@ document.addEventListener("alpine:init", () => {
     },
   });
 
+  Alpine.store("cartBtnObserver", {
+    isAddToCartVisible: true,
+  });
+
   Alpine.effect(() => {
     const menu = Alpine.store("menu");
     const sizePicker = Alpine.store("sizePicker");

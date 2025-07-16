@@ -150,9 +150,20 @@
             </svg>
         </button>
 
-        <button type="button" class="button-primary w-full mb-3">
-            Add to Cart - $<span x-text="product.price.toLocaleString()"></span>
-        </button>
+        <div x-data x-init="
+    const observer = new IntersectionObserver(([entry]) => {
+      $store.cartBtnObserver.isAddToCartVisible = entry.isIntersecting;
+    }, {
+      root: null,
+      threshold: 0.1
+    });
+
+    observer.observe($refs.addToCart);
+  ">
+            <button type="button" x-ref="addToCart" class="button-primary w-full mb-3">
+                Add to Cart - $<span x-text="product.price.toLocaleString()"></span>
+            </button>
+        </div>
 
         <p class="text-center mb-3">
             As low as $99/mo or 0% APR with Affirm.

@@ -146,7 +146,7 @@ body {
 }
 
 .button-primary {
-  @apply bg-primary hover:bg-primary/75 text-white text-sm uppercase font-normal tracking-[2px] px-4 py-5 cursor-pointer transition-colors duration-300;
+  @apply bg-primary hover:bg-primary/90 text-white text-sm uppercase font-normal tracking-[2px] px-4 py-5 cursor-pointer transition-colors duration-300;
 }
 
 .button-primary-outline {

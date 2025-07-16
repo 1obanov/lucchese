@@ -1,0 +1,41 @@
+<div x-data x-show="!$store.cartBtnObserver.isAddToCartVisible" x-transition id="sticky-btn"
+    class="fixed bottom-4 lg:bottom-8 right-0 lg:right-8 flex items-center justify-between w-full lg:max-w-[628px] lg:bg-white text-primary shadow-[0_12px_24px_0] shadow-black/15 px-4 lg:p-4 z-9">
+    <div class="hidden lg:flex items-center gap-4">
+        <picture class="w-14 h-14">
+            <source :srcset="currentVariant.images[0].webp" type="image/webp" />
+            <img :src="currentVariant.images[0].jpg" :alt="product.name" class="w-full h-full object-cover" />
+        </picture>
+        <div>
+            <h2 class="text-xl font-light uppercase mb-0.5" x-text="product.name"></h2>
+            <div class="flex justify-between items-center gap-2">
+                <span class="text-primary text-lg">
+                    Size: <span class="font-bold" x-text="selectedSize"></span>
+                </span>
+                <span class="block w-px h-4 flex-basis-[1px] bg-neutral-400"></span>
+                <span class="text-primary text-lg">
+                    Width:
+                    <span class="font-medium" x-text="selectedWidth"></span>
+                </span>
+                <span class="block w-px h-4 flex-basis-[1px] bg-neutral-400"></span>
+                <template x-if="currentVariant.hasToeHeelSize">
+                    <span class="text-primary text-lg">
+                        Toe + Heel:
+                        <span class="font-medium" x-text="selectedToeHeelSize || product.toeHeelSizes[0]"></span>
+                    </span>
+                </template>
+
+                <template x-if="currentVariant.hasCalfWidth">
+                    <span class="text-primary text-lg">
+                        Calf Width:
+                        <span class="font-medium" x-text="selectedCalfWidth || product.calfWidths[0]"></span>
+                    </span>
+                </template>
+            </div>
+        </div>
+    </div>
+    <div class="flex-shrink-0 w-full lg:w-auto bg-black lg:bg-transparent">
+        <button type="button" class="button-primary w-full lg:w-[197px] lg:!px-1.5">
+            Add to Cart - $<span x-text="product.price.toLocaleString()"></span>
+        </button>
+    </div>
+</div>
