@@ -1,8 +1,11 @@
 import "virtual:svg-icons-register";
 import Alpine from "alpinejs";
-import Swiper from "swiper/bundle";
-import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
-import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import { loadProduct, loadRecommendations } from "./loadData.js";
+import { initFancybox } from "./initFancybox.js";
+import {
+  handleProductSlider,
+  initRecommendationsSlider,
+} from "./initSliders.js";
 
 function productPage() {
   const selections = {
@@ -28,45 +31,28 @@ function productPage() {
     addedToCart: false,
 
     async init() {
-      const fetchJson = async (url) => {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
-        return res.json();
-      };
-      try {
-        const [productData, recommendationsData] = await Promise.all([
-          fetchJson("/src/data/product.json"),
-          fetchJson("/src/data/recommendations.json"),
-        ]);
+      this.product = await loadProduct();
+      this.recommendations = await loadRecommendations();
 
-        this.product = productData;
-        this.currentVariant = this.product?.variants?.[0] ?? null;
+      this.currentVariant = this.product?.variants?.[0] ?? null;
+      this.currentRecommendations = this.recommendations.map(
+        (rec) => rec.variants[0]
+      );
 
-        this.recommendations = recommendationsData;
-        this.currentRecommendations = this.recommendations.map(
-          (rec) => rec.variants[0]
-        );
+      this.colors = this.product?.colors ?? [];
 
-        this.colors = this.product?.colors ?? [];
+      this.setDefaultSelections();
 
-        this.setDefaultSelections();
+      this.isProductLoaded = true;
 
-        this.isProductLoaded = true;
+      this.$nextTick(() => {
+        handleProductSlider();
+        window.addEventListener("resize", handleProductSlider);
+      });
 
-        this.$nextTick(() => {
-          this.handleSwiper();
+      initRecommendationsSlider();
 
-          window.addEventListener("resize", () => {
-            this.handleSwiper();
-          });
-        });
-
-        this.initRecommendationsSlider();
-
-        Fancybox.bind("[data-fancybox]", {});
-      } catch (error) {
-        console.error("Failed to load product data:", error);
-      }
+      initFancybox();
     },
 
     setDefaultSelections() {
@@ -76,53 +62,6 @@ function productPage() {
         const value = this.product?.[productKey] ?? [];
         this[selectedKey] = value[0] ?? null;
       }
-    },
-
-    handleSwiper() {
-      const mobileBreakpoint = 768;
-      const isMobile = window.innerWidth < mobileBreakpoint;
-
-      if (isMobile) {
-        if (!this.swiperInstance) {
-          this.swiperInstance = new Swiper(".thumbsSlider", {
-            spaceBetween: 1,
-            slidesPerView: 3.5,
-          });
-        }
-        if (!this.swiper2Instance) {
-          this.swiper2Instance = new Swiper(".mainSlider", {
-            thumbs: {
-              swiper: this.swiperInstance,
-            },
-          });
-        }
-      } else {
-        if (this.swiper2Instance) {
-          this.swiper2Instance.destroy(true, true);
-          this.swiper2Instance = null;
-        }
-        if (this.swiperInstance) {
-          this.swiperInstance.destroy(true, true);
-          this.swiperInstance = null;
-        }
-      }
-    },
-
-    initRecommendationsSlider() {
-      const recommendationsSlider = new Swiper(".recommendationsSlider", {
-        loop: true,
-        spaceBetween: 2,
-        slidesPerView: 1.1,
-        navigation: {
-          nextEl: ".button-next",
-          prevEl: ".button-prev",
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-          },
-        },
-      });
     },
 
     selectColor(color) {
@@ -149,7 +88,8 @@ function productPage() {
       }
     },
 
-    setValue(field, value) {
+    // Updates selectedSize, selectedWidth, selectedToeHeelSize, or selectedCalfWidth
+    updateValue(field, value) {
       if (field in this) {
         this[field] = value;
       }

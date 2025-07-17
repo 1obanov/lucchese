@@ -47,7 +47,7 @@
                                 :class="{
       'shadow-primary hover:shadow-primary font-medium shadow-[inset_0_0_0_2px]': selectedSize === size,
       'shadow-neutral-400 hover:shadow-neutral-600': selectedSize !== size
-    }" @click="setValue('selectedSize', size)" x-text="size"></button>
+    }" @click="updateValue('selectedSize', size)" x-text="size"></button>
                         </template>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                                 :class="{
       'shadow-primary hover:shadow-primary font-medium shadow-[inset_0_0_0_2px]': selectedWidth === width,
       'shadow-neutral-400 hover:shadow-neutral-600': selectedWidth !== width
-    }" @click="setValue('selectedWidth', width)" x-text="width"></button>
+    }" @click="updateValue('selectedWidth', width)" x-text="width"></button>
                         </template>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                                         :class="{
       'shadow-primary hover:shadow-primary font-medium shadow-[inset_0_0_0_2px]': selectedToeHeelSize === size,
       'shadow-neutral-400 hover:shadow-neutral-600': selectedToeHeelSize !== size
-    }" @click="setValue('selectedToeHeelSize', size)" x-text="size"></button>
+    }" @click="updateValue('selectedToeHeelSize', size)" x-text="size"></button>
                                 </template>
                             </div>
 
@@ -127,7 +127,7 @@
                                         :class="{
       'shadow-primary font-medium shadow-[inset_0_0_0_2px]': selectedCalfWidth === width,
       'shadow-neutral-400': selectedCalfWidth !== width
-    }" @click="setValue('selectedCalfWidth', width)" x-text="width"></button>
+    }" @click="updateValue('selectedCalfWidth', width)" x-text="width"></button>
                                 </template>
                             </div>
                         </div>
