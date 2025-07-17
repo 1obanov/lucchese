@@ -107,7 +107,8 @@
         x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
         x-transition:leave="transition transform duration-300" x-transition:leave-start="translate-x-0"
         x-transition:leave-end="-translate-x-full"
-        class="fixed top-[64px] left-0 h-full bg-neutral-100 shadow-lg z-50 w-full max-w-full overflow-auto">
+        class="fixed top-[64px] left-0 h-full bg-neutral-100 shadow-lg z-50 w-full max-w-full pb-16 overflow-auto"
+        :class="{ '!overflow-hidden': $store.menu.openSubmenuId !== null }">
         <div x-data="{ gender: 'men' }">
           <div role="tablist" aria-label="Gender selection"
             class="flex border-b border-neutral-400 max-w-full mx-4 *:py-4 *:px-12 *:tracking-[2px] *:text-sm *:text-primary *:border-b-2 *:uppercase *:cursor-pointer">
@@ -153,7 +154,7 @@
                   x-transition:enter="transition transform duration-300" x-transition:enter-start="translate-x-full"
                   x-transition:enter-end="translate-x-0" x-transition:leave="transition transform duration-300"
                   x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full"
-                  class="absolute right-0 top-[55px] min-w-full h-full bg-neutral-100 py-4 px-3 z-10">
+                  class="absolute right-0 top-[55px] min-w-full h-full bg-neutral-100 pt-4 pb-[119px] px-3 overflow-auto z-10">
                   <button type="button"
                     class="menu-sub-link items-center gap-2 w-full !px-0 mb-3 border-b border-neutral-400"
                     @click="$store.menu.closeSubmenu()">
