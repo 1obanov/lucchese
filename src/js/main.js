@@ -5,6 +5,7 @@ import { initFancybox } from "./initFancybox.js";
 import {
   handleProductSlider,
   initRecommendationsSlider,
+  reInitProductSwipers,
 } from "./initSliders.js";
 
 function productPage() {
@@ -71,6 +72,7 @@ function productPage() {
       }
 
       this.setDefaultSelections();
+      reInitProductSwipers();
     },
 
     selectRecommendationColor(index, colorName) {

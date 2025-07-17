@@ -3,6 +3,17 @@ import Swiper from "swiper/bundle";
 let productThumbsSwiper = null;
 let productMainSwiper = null;
 
+function destroyProductSwipers() {
+  if (productMainSwiper) {
+    productMainSwiper.destroy(true, true);
+    productMainSwiper = null;
+  }
+  if (productThumbsSwiper) {
+    productThumbsSwiper.destroy(true, true);
+    productThumbsSwiper = null;
+  }
+}
+
 export function handleProductSlider() {
   const mobileBreakpoint = 768;
   const isMobile = window.innerWidth < mobileBreakpoint;
@@ -22,14 +33,7 @@ export function handleProductSlider() {
       });
     }
   } else {
-    if (productMainSwiper) {
-      productMainSwiper.destroy(true, true);
-      productMainSwiper = null;
-    }
-    if (productThumbsSwiper) {
-      productThumbsSwiper.destroy(true, true);
-      productThumbsSwiper = null;
-    }
+    destroyProductSwipers();
   }
 }
 
@@ -48,4 +52,9 @@ export function initRecommendationsSlider() {
       },
     },
   });
+}
+
+export function reInitProductSwipers() {
+  destroyProductSwipers();
+  handleProductSlider();
 }
