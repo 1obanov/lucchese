@@ -9,8 +9,8 @@
         "name": "White",
         "images": [
           {
-            "webp": "/assets/images/recommendations/dallas/dallas-white.webp",
-            "jpg": "/assets/images/recommendations/dallas/dallas-white.jpg"
+            "webp": "assets/images/recommendations/dallas/dallas-white.webp",
+            "jpg": "assets/images/recommendations/dallas/dallas-white.jpg"
           }
         ]
       }
@@ -22,12 +22,12 @@
         "color": "White",
         "images": [
           {
-            "webp": "/assets/images/recommendations/dallas/dallas-1.webp",
-            "jpg": "/assets/images/recommendations/dallas/dallas-1.jpg"
+            "webp": "assets/images/recommendations/dallas/dallas-1.webp",
+            "jpg": "assets/images/recommendations/dallas/dallas-1.jpg"
           },
           {
-            "webp": "/assets/images/recommendations/dallas/dallas-2.webp",
-            "jpg": "/assets/images/recommendations/dallas/dallas-2.jpg"
+            "webp": "assets/images/recommendations/dallas/dallas-2.webp",
+            "jpg": "assets/images/recommendations/dallas/dallas-2.jpg"
           }
         ]
       }
@@ -43,8 +43,8 @@
         "name": "Black",
         "images": [
           {
-            "webp": "/assets/images/recommendations/lilah/lilah-black.webp",
-            "jpg": "/assets/images/recommendations/lilah/lilah-black.jpg"
+            "webp": "assets/images/recommendations/lilah/lilah-black.webp",
+            "jpg": "assets/images/recommendations/lilah/lilah-black.jpg"
           }
         ]
       },
@@ -52,8 +52,8 @@
         "name": "Chocolate",
         "images": [
           {
-            "webp": "/assets/images/recommendations/lilah/lilah-chocolate.webp",
-            "jpg": "/assets/images/recommendations/lilah/lilah-chocolate.jpg"
+            "webp": "assets/images/recommendations/lilah/lilah-chocolate.webp",
+            "jpg": "assets/images/recommendations/lilah/lilah-chocolate.jpg"
           }
         ]
       },
@@ -61,8 +61,8 @@
         "name": "Cream",
         "images": [
           {
-            "webp": "/assets/images/recommendations/lilah/lilah-cream.webp",
-            "jpg": "/assets/images/recommendations/lilah/lilah-cream.jpg"
+            "webp": "assets/images/recommendations/lilah/lilah-cream.webp",
+            "jpg": "assets/images/recommendations/lilah/lilah-cream.jpg"
           }
         ]
       },
@@ -70,8 +70,8 @@
         "name": "Crimson",
         "images": [
           {
-            "webp": "/assets/images/recommendations/lilah/lilah-crimson.webp",
-            "jpg": "/assets/images/recommendations/lilah/lilah-crimson.jpg"
+            "webp": "assets/images/recommendations/lilah/lilah-crimson.webp",
+            "jpg": "assets/images/recommendations/lilah/lilah-crimson.jpg"
           }
         ]
       }
@@ -83,12 +83,12 @@
         "color": "Black",
         "images": [
           {
-            "webp": "/assets/images/recommendations/lilah/lilah-1.webp",
-            "jpg": "/assets/images/recommendations/lilah/lilah-1.jpg"
+            "webp": "assets/images/recommendations/lilah/lilah-1.webp",
+            "jpg": "assets/images/recommendations/lilah/lilah-1.jpg"
           },
           {
-            "webp": "/assets/images/recommendations/lilah/lilah-2.webp",
-            "jpg": "/assets/images/recommendations/lilah/lilah-2.jpg"
+            "webp": "assets/images/recommendations/lilah/lilah-2.webp",
+            "jpg": "assets/images/recommendations/lilah/lilah-2.jpg"
           }
         ]
       },
@@ -98,12 +98,12 @@
         "color": "Chocolate",
         "images": [
           {
-            "webp": "/assets/images/recommendations/lilah/lilah-3.webp",
-            "jpg": "/assets/images/recommendations/lilah/lilah-3.jpg"
+            "webp": "assets/images/recommendations/lilah/lilah-3.webp",
+            "jpg": "assets/images/recommendations/lilah/lilah-3.jpg"
           },
           {
-            "webp": "/assets/images/recommendations/lilah/lilah-4.webp",
-            "jpg": "/assets/images/recommendations/lilah/lilah-4.jpg"
+            "webp": "assets/images/recommendations/lilah/lilah-4.webp",
+            "jpg": "assets/images/recommendations/lilah/lilah-4.jpg"
           }
         ]
       },
@@ -113,12 +113,12 @@
         "color": "Cream",
         "images": [
           {
-            "webp": "/assets/images/recommendations/lilah/lilah-5.webp",
-            "jpg": "/assets/images/recommendations/lilah/lilah-5.jpg"
+            "webp": "assets/images/recommendations/lilah/lilah-5.webp",
+            "jpg": "assets/images/recommendations/lilah/lilah-5.jpg"
           },
           {
-            "webp": "/assets/images/recommendations/lilah/lilah-6.webp",
-            "jpg": "/assets/images/recommendations/lilah/lilah-6.jpg"
+            "webp": "assets/images/recommendations/lilah/lilah-6.webp",
+            "jpg": "assets/images/recommendations/lilah/lilah-6.jpg"
           }
         ]
       },
@@ -128,12 +128,12 @@
         "color": "Crimson",
         "images": [
           {
-            "webp": "/assets/images/recommendations/lilah/lilah-7.webp",
-            "jpg": "/assets/images/recommendations/lilah/lilah-7.jpg"
+            "webp": "assets/images/recommendations/lilah/lilah-7.webp",
+            "jpg": "assets/images/recommendations/lilah/lilah-7.jpg"
           },
           {
-            "webp": "/assets/images/recommendations/lilah/lilah-8.webp",
-            "jpg": "/assets/images/recommendations/lilah/lilah-8.jpg"
+            "webp": "assets/images/recommendations/lilah/lilah-8.webp",
+            "jpg": "assets/images/recommendations/lilah/lilah-8.jpg"
           }
         ]
       }
@@ -149,8 +149,8 @@
         "name": "Black",
         "images": [
           {
-            "webp": "/assets/images/recommendations/ace-high/ace-high-black.webp",
-            "jpg": "/assets/images/recommendations/ace-high/ace-high-black.jpg"
+            "webp": "assets/images/recommendations/ace-high/ace-high-black.webp",
+            "jpg": "assets/images/recommendations/ace-high/ace-high-black.jpg"
           }
         ]
       }
@@ -162,12 +162,12 @@
         "color": "Black",
         "images": [
           {
-            "webp": "/assets/images/recommendations/ace-high/ace-high-1.webp",
-            "jpg": "/assets/images/recommendations/ace-high/ace-high-1.jpg"
+            "webp": "assets/images/recommendations/ace-high/ace-high-1.webp",
+            "jpg": "assets/images/recommendations/ace-high/ace-high-1.jpg"
           },
           {
-            "webp": "/assets/images/recommendations/ace-high/ace-high-2.webp",
-            "jpg": "/assets/images/recommendations/ace-high/ace-high-2.jpg"
+            "webp": "assets/images/recommendations/ace-high/ace-high-2.webp",
+            "jpg": "assets/images/recommendations/ace-high/ace-high-2.jpg"
           }
         ]
       }
@@ -183,8 +183,8 @@
         "name": "Alamo",
         "images": [
           {
-            "webp": "/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-alamo.webp",
-            "jpg": "/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-alamo.jpg"
+            "webp": "assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-alamo.webp",
+            "jpg": "assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-alamo.jpg"
           }
         ]
       },
@@ -192,8 +192,8 @@
         "name": "Blue bird wash",
         "images": [
           {
-            "webp": "/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-blue-bird-wash.webp",
-            "jpg": "/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-blue-bird-wash.jpg"
+            "webp": "assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-blue-bird-wash.webp",
+            "jpg": "assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-blue-bird-wash.jpg"
           }
         ]
       }
@@ -205,12 +205,12 @@
         "color": "Alamo",
         "images": [
           {
-            "webp": "/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-3.webp",
-            "jpg": "/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-3.jpg"
+            "webp": "assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-3.webp",
+            "jpg": "assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-3.jpg"
           },
           {
-            "webp": "/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-4.webp",
-            "jpg": "/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-4.jpg"
+            "webp": "assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-4.webp",
+            "jpg": "assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-4.jpg"
           }
         ]
       },
@@ -220,12 +220,12 @@
         "color": "Blue bird wash",
         "images": [
           {
-            "webp": "/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-1.webp",
-            "jpg": "/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-1.jpg"
+            "webp": "assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-1.webp",
+            "jpg": "assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-1.jpg"
           },
           {
-            "webp": "/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-2.webp",
-            "jpg": "/assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-2.jpg"
+            "webp": "assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-2.webp",
+            "jpg": "assets/images/recommendations/reese-womens-snap-shirt/reese-womens-snap-shirt-2.jpg"
           }
         ]
       }

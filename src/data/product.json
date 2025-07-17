@@ -12,8 +12,8 @@
       "name": "Glitz Cream",
       "images": [
         {
-          "webp": "/assets/images/colors/glitz-cream.webp",
-          "jpg": "/assets/images/colors/glitz-cream.jpg"
+          "webp": "assets/images/colors/glitz-cream.webp",
+          "jpg": "assets/images/colors/glitz-cream.jpg"
         }
       ]
     },
@@ -21,8 +21,8 @@
       "name": "Red",
       "images": [
         {
-          "webp": "/assets/images/colors/red.webp",
-          "jpg": "/assets/images/colors/red.jpg"
+          "webp": "assets/images/colors/red.webp",
+          "jpg": "assets/images/colors/red.jpg"
         }
       ]
     },
@@ -30,8 +30,8 @@
       "name": "Black",
       "images": [
         {
-          "webp": "/assets/images/colors/black.webp",
-          "jpg": "/assets/images/colors/black.jpg"
+          "webp": "assets/images/colors/black.webp",
+          "jpg": "assets/images/colors/black.jpg"
         }
       ]
     },
@@ -39,8 +39,8 @@
       "name": "Brown",
       "images": [
         {
-          "webp": "/assets/images/colors/brown.webp",
-          "jpg": "/assets/images/colors/brown.jpg"
+          "webp": "assets/images/colors/brown.webp",
+          "jpg": "assets/images/colors/brown.jpg"
         }
       ]
     },
@@ -48,8 +48,8 @@
       "name": "Espresso",
       "images": [
         {
-          "webp": "/assets/images/colors/espresso.webp",
-          "jpg": "/assets/images/colors/espresso.jpg"
+          "webp": "assets/images/colors/espresso.webp",
+          "jpg": "assets/images/colors/espresso.jpg"
         }
       ]
     },
@@ -57,8 +57,8 @@
       "name": "Crinkle Patent Black",
       "images": [
         {
-          "webp": "/assets/images/colors/crinkle-patent-black.webp",
-          "jpg": "/assets/images/colors/crinkle-patent-black.jpg"
+          "webp": "assets/images/colors/crinkle-patent-black.webp",
+          "jpg": "assets/images/colors/crinkle-patent-black.jpg"
         }
       ]
     },
@@ -66,16 +66,16 @@
       "name": "Red Luster",
       "images": [
         {
-          "webp": "/assets/images/colors/red-luster.webp",
-          "jpg": "/assets/images/colors/red-luster.jpg"
+          "webp": "assets/images/colors/red-luster.webp",
+          "jpg": "assets/images/colors/red-luster.jpg"
         }
       ]
     }
   ],
   "careImage": [
     {
-      "webp": "/assets/images/care.webp",
-      "jpg": "/assets/images/care.jpg"
+      "webp": "assets/images/care.webp",
+      "jpg": "assets/images/care.jpg"
     }
   ],
   "variants": [
@@ -104,8 +104,8 @@
         "text": "Suede is made from the inside of an animal skin (whereas other leathers are the outside of the skin). It has a distinctive shaggy nap. This stead suede features a sandwich-like detail where the cutaway edges showcase a distinct vibrant color that complements the rugged nap. The beautifully rich suede colors bring playfulness while the texture adds character.",
         "images": [
           {
-            "webp": "/assets/images/product/priscilla-espresso/material-espresso.webp",
-            "jpg": "/assets/images/product/priscilla-espresso/material-espresso.jpg"
+            "webp": "assets/images/product/priscilla-espresso/material-espresso.webp",
+            "jpg": "assets/images/product/priscilla-espresso/material-espresso.jpg"
           }
         ]
       },
@@ -118,40 +118,40 @@
       "hasCalfWidth": false,
       "images": [
         {
-          "webp": "/assets/images/product/priscilla-espresso/priscilla-espresso-1.webp",
-          "jpg": "/assets/images/product/priscilla-espresso/priscilla-espresso-1.jpg"
+          "webp": "assets/images/product/priscilla-espresso/priscilla-espresso-1.webp",
+          "jpg": "assets/images/product/priscilla-espresso/priscilla-espresso-1.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-espresso/priscilla-espresso-2.webp",
-          "jpg": "/assets/images/product/priscilla-espresso/priscilla-espresso-2.jpg"
+          "webp": "assets/images/product/priscilla-espresso/priscilla-espresso-2.webp",
+          "jpg": "assets/images/product/priscilla-espresso/priscilla-espresso-2.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-espresso/priscilla-espresso-3.webp",
-          "jpg": "/assets/images/product/priscilla-espresso/priscilla-espresso-3.jpg"
+          "webp": "assets/images/product/priscilla-espresso/priscilla-espresso-3.webp",
+          "jpg": "assets/images/product/priscilla-espresso/priscilla-espresso-3.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-espresso/priscilla-espresso-4.webp",
-          "jpg": "/assets/images/product/priscilla-espresso/priscilla-espresso-4.jpg"
+          "webp": "assets/images/product/priscilla-espresso/priscilla-espresso-4.webp",
+          "jpg": "assets/images/product/priscilla-espresso/priscilla-espresso-4.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-espresso/priscilla-espresso-5.webp",
-          "jpg": "/assets/images/product/priscilla-espresso/priscilla-espresso-5.jpg"
+          "webp": "assets/images/product/priscilla-espresso/priscilla-espresso-5.webp",
+          "jpg": "assets/images/product/priscilla-espresso/priscilla-espresso-5.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-espresso/priscilla-espresso-6.webp",
-          "jpg": "/assets/images/product/priscilla-espresso/priscilla-espresso-6.jpg"
+          "webp": "assets/images/product/priscilla-espresso/priscilla-espresso-6.webp",
+          "jpg": "assets/images/product/priscilla-espresso/priscilla-espresso-6.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-espresso/priscilla-espresso-7.webp",
-          "jpg": "/assets/images/product/priscilla-espresso/priscilla-espresso-7.jpg"
+          "webp": "assets/images/product/priscilla-espresso/priscilla-espresso-7.webp",
+          "jpg": "assets/images/product/priscilla-espresso/priscilla-espresso-7.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-espresso/priscilla-espresso-8.webp",
-          "jpg": "/assets/images/product/priscilla-espresso/priscilla-espresso-8.jpg"
+          "webp": "assets/images/product/priscilla-espresso/priscilla-espresso-8.webp",
+          "jpg": "assets/images/product/priscilla-espresso/priscilla-espresso-8.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-espresso/priscilla-espresso-9.webp",
-          "jpg": "/assets/images/product/priscilla-espresso/priscilla-espresso-9.jpg"
+          "webp": "assets/images/product/priscilla-espresso/priscilla-espresso-9.webp",
+          "jpg": "assets/images/product/priscilla-espresso/priscilla-espresso-9.jpg"
         }
       ]
     },
@@ -178,8 +178,8 @@
       "material": {
         "images": [
           {
-            "webp": "/assets/images/product/priscilla-glitz-cream/material-glitz-cream.webp",
-            "jpg": "/assets/images/product/priscilla-glitz-cream/material-glitz-cream.jpg"
+            "webp": "assets/images/product/priscilla-glitz-cream/material-glitz-cream.webp",
+            "jpg": "assets/images/product/priscilla-glitz-cream/material-glitz-cream.jpg"
           }
         ]
       },
@@ -192,24 +192,24 @@
       "hasCalfWidth": true,
       "images": [
         {
-          "webp": "/assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-1.webp",
-          "jpg": "/assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-1.jpg"
+          "webp": "assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-1.webp",
+          "jpg": "assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-1.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-2.webp",
-          "jpg": "/assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-2.jpg"
+          "webp": "assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-2.webp",
+          "jpg": "assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-2.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-3.webp",
-          "jpg": "/assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-3.jpg"
+          "webp": "assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-3.webp",
+          "jpg": "assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-3.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-4.webp",
-          "jpg": "/assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-4.jpg"
+          "webp": "assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-4.webp",
+          "jpg": "assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-4.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-5.webp",
-          "jpg": "/assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-5.jpg"
+          "webp": "assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-5.webp",
+          "jpg": "assets/images/product/priscilla-glitz-cream/priscilla-glitz-cream-5.jpg"
         }
       ]
     },
@@ -238,8 +238,8 @@
         "text": "Mad Dog goat sits in the sweet spot of classic style and sturdy substance. The iconic leather has high tensile strength, abrasion resistance, and a natural softness. Oils and waxes used in the tanning process bring out the leather’s distinctive grain and allow scratches and scuffs to blend in. In time, this leather lightens in some places and burnishes in others for a covetable vintage patina.",
         "images": [
           {
-            "webp": "/assets/images/product/priscilla-red/material-red.webp",
-            "jpg": "/assets/images/product/priscilla-red/material-red.jpg"
+            "webp": "assets/images/product/priscilla-red/material-red.webp",
+            "jpg": "assets/images/product/priscilla-red/material-red.jpg"
           }
         ]
       },
@@ -252,24 +252,24 @@
       "hasCalfWidth": true,
       "images": [
         {
-          "webp": "/assets/images/product/priscilla-red/priscilla-red-1.webp",
-          "jpg": "/assets/images/product/priscilla-red/priscilla-red-1.jpg"
+          "webp": "assets/images/product/priscilla-red/priscilla-red-1.webp",
+          "jpg": "assets/images/product/priscilla-red/priscilla-red-1.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-red/priscilla-red-2.webp",
-          "jpg": "/assets/images/product/priscilla-red/priscilla-red-2.jpg"
+          "webp": "assets/images/product/priscilla-red/priscilla-red-2.webp",
+          "jpg": "assets/images/product/priscilla-red/priscilla-red-2.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-red/priscilla-red-3.webp",
-          "jpg": "/assets/images/product/priscilla-red/priscilla-red-3.jpg"
+          "webp": "assets/images/product/priscilla-red/priscilla-red-3.webp",
+          "jpg": "assets/images/product/priscilla-red/priscilla-red-3.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-red/priscilla-red-4.webp",
-          "jpg": "/assets/images/product/priscilla-red/priscilla-red-4.jpg"
+          "webp": "assets/images/product/priscilla-red/priscilla-red-4.webp",
+          "jpg": "assets/images/product/priscilla-red/priscilla-red-4.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-red/priscilla-red-5.webp",
-          "jpg": "/assets/images/product/priscilla-red/priscilla-red-5.jpg"
+          "webp": "assets/images/product/priscilla-red/priscilla-red-5.webp",
+          "jpg": "assets/images/product/priscilla-red/priscilla-red-5.jpg"
         }
       ]
     },
@@ -298,8 +298,8 @@
         "text": "Lucchese’s goat embodies all the characteristics of a timeless wardrobe essential. Sitting in the sweet spot of classic style and sturdy substance, the smooth leather offers a traditional style in an array of colors. It’s a skin that molds to your foot yet maintains its integrity. The result is a custom fit that stands the test of time. It requires minimal maintenance and, if you desire, takes a high shine—making it versatile enough for everyday wear as well as special occasions.",
         "images": [
           {
-            "webp": "/assets/images/product/priscilla-black/material-black.webp",
-            "jpg": "/assets/images/product/priscilla-black/material-black.jpg"
+            "webp": "assets/images/product/priscilla-black/material-black.webp",
+            "jpg": "assets/images/product/priscilla-black/material-black.jpg"
           }
         ]
       },
@@ -312,24 +312,24 @@
       "hasCalfWidth": true,
       "images": [
         {
-          "webp": "/assets/images/product/priscilla-black/priscilla-black-1.webp",
-          "jpg": "/assets/images/product/priscilla-black/priscilla-black-1.jpg"
+          "webp": "assets/images/product/priscilla-black/priscilla-black-1.webp",
+          "jpg": "assets/images/product/priscilla-black/priscilla-black-1.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-black/priscilla-black-2.webp",
-          "jpg": "/assets/images/product/priscilla-black/priscilla-black-2.jpg"
+          "webp": "assets/images/product/priscilla-black/priscilla-black-2.webp",
+          "jpg": "assets/images/product/priscilla-black/priscilla-black-2.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-black/priscilla-black-3.webp",
-          "jpg": "/assets/images/product/priscilla-black/priscilla-black-3.jpg"
+          "webp": "assets/images/product/priscilla-black/priscilla-black-3.webp",
+          "jpg": "assets/images/product/priscilla-black/priscilla-black-3.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-black/priscilla-black-4.webp",
-          "jpg": "/assets/images/product/priscilla-black/priscilla-black-4.jpg"
+          "webp": "assets/images/product/priscilla-black/priscilla-black-4.webp",
+          "jpg": "assets/images/product/priscilla-black/priscilla-black-4.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-black/priscilla-black-5.webp",
-          "jpg": "/assets/images/product/priscilla-black/priscilla-black-5.jpg"
+          "webp": "assets/images/product/priscilla-black/priscilla-black-5.webp",
+          "jpg": "assets/images/product/priscilla-black/priscilla-black-5.jpg"
         }
       ]
     },
@@ -358,8 +358,8 @@
         "text": "Lucchese’s goat embodies all the characteristics of a timeless wardrobe essential. Sitting in the sweet spot of classic style and sturdy substance, the smooth leather offers a traditional style in an array of colors. It’s a skin that molds to your foot yet maintains its integrity. The result is a custom fit that stands the test of time. It requires minimal maintenance and, if you desire, takes a high shine—making it versatile enough for everyday wear as well as special occasions.",
         "images": [
           {
-            "webp": "/assets/images/product/priscilla-brown/material-brown.webp",
-            "jpg": "/assets/images/product/priscilla-brown/material-brown.jpg"
+            "webp": "assets/images/product/priscilla-brown/material-brown.webp",
+            "jpg": "assets/images/product/priscilla-brown/material-brown.jpg"
           }
         ]
       },
@@ -372,24 +372,24 @@
       "hasCalfWidth": true,
       "images": [
         {
-          "webp": "/assets/images/product/priscilla-brown/priscilla-brown-1.webp",
-          "jpg": "/assets/images/product/priscilla-brown/priscilla-brown-1.jpg"
+          "webp": "assets/images/product/priscilla-brown/priscilla-brown-1.webp",
+          "jpg": "assets/images/product/priscilla-brown/priscilla-brown-1.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-brown/priscilla-brown-2.webp",
-          "jpg": "/assets/images/product/priscilla-brown/priscilla-brown-2.jpg"
+          "webp": "assets/images/product/priscilla-brown/priscilla-brown-2.webp",
+          "jpg": "assets/images/product/priscilla-brown/priscilla-brown-2.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-brown/priscilla-brown-3.webp",
-          "jpg": "/assets/images/product/priscilla-brown/priscilla-brown-3.jpg"
+          "webp": "assets/images/product/priscilla-brown/priscilla-brown-3.webp",
+          "jpg": "assets/images/product/priscilla-brown/priscilla-brown-3.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-brown/priscilla-brown-4.webp",
-          "jpg": "/assets/images/product/priscilla-brown/priscilla-brown-4.jpg"
+          "webp": "assets/images/product/priscilla-brown/priscilla-brown-4.webp",
+          "jpg": "assets/images/product/priscilla-brown/priscilla-brown-4.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-brown/priscilla-brown-5.webp",
-          "jpg": "/assets/images/product/priscilla-brown/priscilla-brown-5.jpg"
+          "webp": "assets/images/product/priscilla-brown/priscilla-brown-5.webp",
+          "jpg": "assets/images/product/priscilla-brown/priscilla-brown-5.jpg"
         }
       ]
     },
@@ -424,36 +424,36 @@
       "hasCalfWidth": false,
       "images": [
         {
-          "webp": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-1.webp",
-          "jpg": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-1.jpg"
+          "webp": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-1.webp",
+          "jpg": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-1.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-2.webp",
-          "jpg": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-2.jpg"
+          "webp": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-2.webp",
+          "jpg": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-2.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-3.webp",
-          "jpg": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-3.jpg"
+          "webp": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-3.webp",
+          "jpg": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-3.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-4.webp",
-          "jpg": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-4.jpg"
+          "webp": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-4.webp",
+          "jpg": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-4.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-5.webp",
-          "jpg": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-5.jpg"
+          "webp": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-5.webp",
+          "jpg": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-5.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-6.webp",
-          "jpg": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-6.jpg"
+          "webp": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-6.webp",
+          "jpg": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-6.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-7.webp",
-          "jpg": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-7.jpg"
+          "webp": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-7.webp",
+          "jpg": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-7.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-8.webp",
-          "jpg": "/assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-8.jpg"
+          "webp": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-8.webp",
+          "jpg": "assets/images/product/priscilla-crinkle-patent-black/priscilla-crinkle-patent-black-8.jpg"
         }
       ]
     },
@@ -481,24 +481,24 @@
       "hasCalfWidth": false,
       "images": [
         {
-          "webp": "/assets/images/product/priscilla-red-luster/priscilla-red-luster-1.webp",
-          "jpg": "/assets/images/product/priscilla-red-luster/priscilla-red-luster-1.jpg"
+          "webp": "assets/images/product/priscilla-red-luster/priscilla-red-luster-1.webp",
+          "jpg": "assets/images/product/priscilla-red-luster/priscilla-red-luster-1.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-red-luster/priscilla-red-luster-2.webp",
-          "jpg": "/assets/images/product/priscilla-red-luster/priscilla-red-luster-2.jpg"
+          "webp": "assets/images/product/priscilla-red-luster/priscilla-red-luster-2.webp",
+          "jpg": "assets/images/product/priscilla-red-luster/priscilla-red-luster-2.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-red-luster/priscilla-red-luster-3.webp",
-          "jpg": "/assets/images/product/priscilla-red-luster/priscilla-red-luster-3.jpg"
+          "webp": "assets/images/product/priscilla-red-luster/priscilla-red-luster-3.webp",
+          "jpg": "assets/images/product/priscilla-red-luster/priscilla-red-luster-3.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-red-luster/priscilla-red-luster-4.webp",
-          "jpg": "/assets/images/product/priscilla-red-luster/priscilla-red-luster-4.jpg"
+          "webp": "assets/images/product/priscilla-red-luster/priscilla-red-luster-4.webp",
+          "jpg": "assets/images/product/priscilla-red-luster/priscilla-red-luster-4.jpg"
         },
         {
-          "webp": "/assets/images/product/priscilla-red-luster/priscilla-red-luster-5.webp",
-          "jpg": "/assets/images/product/priscilla-red-luster/priscilla-red-luster-5.jpg"
+          "webp": "assets/images/product/priscilla-red-luster/priscilla-red-luster-5.webp",
+          "jpg": "assets/images/product/priscilla-red-luster/priscilla-red-luster-5.jpg"
         }
       ]
     }
