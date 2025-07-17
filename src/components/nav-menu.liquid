@@ -30,9 +30,11 @@
         <li tabindex="0">
             <span @click="$store.menu.openSubmenu('{{ item.id }}')" class="menu-link flex">
                 <span>{{ item.name }}</span>
+                {% if item.submenu and item.submenu.size > 0 %}
                 <svg class="w-[24px] h-[24px] fill-current">
                     <use xlink:href="#icon-chevron-right"></use>
                 </svg>
+                {% endif %}
             </span>
             {% if item.submenu and item.submenu.size > 0 %}
             <div x-show="$store.menu.openSubmenuId === '{{ item.id }}'"
