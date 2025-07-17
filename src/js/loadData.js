@@ -1,6 +1,7 @@
 export async function loadProduct() {
   try {
-    const res = await fetch("/src/data/product.json");
+    const url = new URL("/src/data/product.json", import.meta.url);
+    const res = await fetch(url);
     return await res.json();
   } catch (error) {
     console.error("Error loading product data:", error);
@@ -10,7 +11,8 @@ export async function loadProduct() {
 
 export async function loadRecommendations() {
   try {
-    const res = await fetch("/src/data/recommendations.json");
+    const url = new URL("/src/data/recommendations.json", import.meta.url);
+    const res = await fetch(url);
     return await res.json();
   } catch (error) {
     console.error("Error loading recommendations:", error);

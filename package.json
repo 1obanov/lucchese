@@ -3,13 +3,17 @@
   "version": "0.0.1",
   "type": "module",
   "private": true,
+  "homepage": "https://1obanov.github.io/lucchese/",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@vituum/vite-plugin-liquid": "^1",
+    "gh-pages": "^6.3.0",
     "vite-plugin-svg-icons": "^2.0.1",
     "vituum": "^1"
   },

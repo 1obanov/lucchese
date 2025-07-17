@@ -4,11 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 import path from "path";
 
-export default {
+export default ({ mode }) => ({
+  base: mode === "development" ? "/" : "/lucchese/",
   plugins: [
     tailwindcss(),
     createSvgIconsPlugin({
-      iconDirs: [path.resolve(process.cwd(), "src/assets/icons/icons-sprite")],
+      iconDirs: [path.resolve(process.cwd(), "public/assets/icons/icons-sprite")],
       symbolId: "icon-[name]",
     }),
     vituum(),
@@ -16,4 +17,4 @@ export default {
       root: "./src",
     }),
   ],
-};
+});
